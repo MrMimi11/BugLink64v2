@@ -32,7 +32,7 @@
                     <img class="nav-link active" aria-current="page" src="../views/image/Logo maquettage.png">
                 </li>
                 <li class="nav-item ml-auto">
-                    <a class="nav-link active" aria-current="page" href="#">Se connecter/s'inscrire</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('login.create') }}">Se connecter/s'inscrire</a>
                 </li>
             </ul>
         </div>

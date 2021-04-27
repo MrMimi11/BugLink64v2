@@ -37,11 +37,11 @@
     <!-- texte au centre pour le speedrun et bug -->
     <div class="centre">
         <p class="text-center mt-4">Nouveau dans le speedrun?</p>
-        <p>Les infos pour se lancer dans le speedrun, c'est ici!
-            Le Speedrun c'est facile ! </br>Même si vous n'en avez jamais fait vous pouvez venir découvrir, progresser,
+        <p class="text-center">Les infos pour se lancer dans le speedrun, c'est ici!
+            Le Speedrun c'est facile ! Même si vous n'en avez jamais fait vous pouvez venir découvrir, progresser,
             et
             peut-être que plus tard vous serez un*e pro en glitch et en speedrun et que vous obtiendrez un record du
-            monde. </br>
+            monde.
             Si vous avez d'autres questions vous pouvez rejoindre le salon discord ou demander de l'aide aux membres de
             la
             communauté.
@@ -56,16 +56,22 @@
     </div>
 
     <div class="imagejeux d-flex justify-content-around">
-        <div><img src="#" alt="image ocarina of time"></div>
-        <div><img src="#" alt="image ocarina of time"></div>
+        <div><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC9_-IAXhJ67bTz_BGagLv4rynn5pFakS4l1I0DekbELkXSrANqmk8QpKU9CgM65I9aAo&usqp=CAU"
+                alt="image ocarina of time"></div>
+        <div><img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC9_-IAXhJ67bTz_BGagLv4rynn5pFakS4l1I0DekbELkXSrANqmk8QpKU9CgM65I9aAo&usqp=CAU"
+                alt="image ocarina of time"></div>
     </div>
 
+<div class="d-flex justify-content-between mt-5">
     <div class="contact">
         <p>Besoin d'aide? Vous pouvez me contacter <a href="{{ route('contact.create') }}">ici</a></p>
     </div>
 
-    <div class="reseau">
-        <div><u>Réseau:</u></div>
+    <div><u>Réseau:</u>
+        <img src="../images/Discord-Logo-Color.svg" alt="logo discord">
     </div>
+</div>
 
 @endsection

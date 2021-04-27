@@ -1,7 +1,7 @@
 @extends('layouts.default')
 @section('content')
     <h2 class="text-center">S'inscrire</h2>
-    <form action="#" method="post" enctype="multipart/form-data">
+    <form action="{{ route('buglink64.index') }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
             <label for="pseudo">Pseudo</label>

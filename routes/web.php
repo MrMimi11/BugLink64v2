@@ -25,6 +25,6 @@ Route::get('buglink64', [HomeController::class, 'index'])->name('buglink64.index
 
 Route::get('contact', [ContactController::class, 'create'])->name('contact.create');
 
-Route::get('login', [LoginController::class, 'create']);
+Route::get('login', [LoginController::class, 'create'])->name('login.create');
 
 Route::get('post', [PostController::class, 'create']);
