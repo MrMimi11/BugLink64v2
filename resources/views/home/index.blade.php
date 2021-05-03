@@ -43,15 +43,15 @@
             peut-être que plus tard vous serez un*e pro en glitch et en speedrun et que vous obtiendrez un record du
             monde.
             Si vous avez d'autres questions vous pouvez rejoindre le salon discord ou demander de l'aide aux membres de
-            la
-            communauté.
+            la communauté.
             Amusez-vous bien !
         </p>
     </div>
 
     <!-- choice ocarina of time and majora's mask -->
+
     <div class="titrejeux d-flex justify-content-around mt-5">
-        <div><u> <a href="{{ route('home.show') }}">The Legend of Zelda: ocarina of time</a></u></div>
+        <div><u> <a href="#">The Legend of Zelda: ocarina of time</a></u></div>
         <div><u> <a href="#">The Legend of Zelda: Majora's Mask</a></u></div>
     </div>
 
@@ -64,14 +64,14 @@
                 alt="image ocarina of time"></div>
     </div>
 
-<div class="d-flex justify-content-between mt-5">
-    <div class="contact">
-        <p>Besoin d'aide? Vous pouvez me contacter <a href="{{ route('contact.create') }}">ici</a></p>
-    </div>
+    <div class="d-flex justify-content-between mt-5">
+        <div class="contact">
+            <p>Besoin d'aide? Vous pouvez me contacter <a href="{{ route('contact.create') }}">ici</a></p>
+        </div>
 
-    <div><u>Réseau:</u>
-        <img src="../images/Discord-Logo-Color.svg" alt="logo discord">
+        <div><u>Réseau:</u>
+            <img src="../images/Discord-Logo-Color.svg" alt="logo discord">
+        </div>
     </div>
-</div>
 
 @endsection

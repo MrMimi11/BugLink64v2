@@ -24,14 +24,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('home', [HomeController::class, 'index'])->name('home.index');
+
 Route::get('contact', [ContactController::class, 'create'])->name('contact.create');
 Route::get('login', [LoginController::class, 'create'])->name('login.create');
 Route::get('post', [PostController::class, 'create']);
 
-Route::get('games', [GameController::class, 'index'])->name('games.index');
-Route::get('games/{game:slug}', [GameController::class, 'show'])->name('games.show');
-Route::get('games/{game:slug}/edit', [GameController::class, 'edit'])->name('games.edit');
-Route::get('games/{game:slug}/destroy', [GameController::class, 'destroy'])->name('games.destroy');
+Route::get('home/games', [GameController::class, 'index'])->name('games.index');
+Route::get('home/games/{game:slug}', [GameController::class, 'show'])->name('games.show');
+Route::get('home/games/{game:slug}/edit', [GameController::class, 'edit'])->name('games.edit');
+Route::get('home/games/{game:slug}/destroy', [GameController::class, 'destroy'])->name('games.destroy');
 
-Route::get('games/{game:slug}/bugs', [BugController::class, 'index'])->name('games.bugs.index');
-Route::get('games/{game:slug}/speedruns', [SpeedrunController::class, 'index'])->name('games.speedruns.index');
+Route::get('home/games/{game:slug}/bugs', [BugController::class, 'index'])->name('games.bugs.index');
+Route::get('home/games/{game:slug}/speedruns', [SpeedrunController::class, 'index'])->name('games.speedruns.index');

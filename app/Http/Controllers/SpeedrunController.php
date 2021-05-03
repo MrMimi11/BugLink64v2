@@ -12,12 +12,14 @@ class SpeedrunController extends Controller
     /**
      * Display a listing of the resource.
      *
+     * @param Game $game
      * @return Response
      */
     public function index(Game $game)
     {
         $game->load('speedruns');
-        dd($game);
+        //dd($game);
+        return view('pages.games.speedruns.index', compact('game'));
     }
 
     /**
@@ -45,11 +47,13 @@ class SpeedrunController extends Controller
      * Display the specified resource.
      *
      * @param Speedrun $speedrun
+     * @param Game $game
      * @return Response
      */
-    public function show(Speedrun $speedrun)
+    public function show( Game $game)
     {
-        //
+        $game->load('speedruns');
+        return view('pages.games.show', compact('game'));
     }
 
     /**

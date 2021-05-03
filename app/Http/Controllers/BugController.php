@@ -12,12 +12,14 @@ class BugController extends Controller
     /**
      * Display a listing of the resource.
      *
+     * @param Game $game
      * @return Response
      */
     public function index(Game $game)
     {
         $game->load('bugs');
-        dd($game);
+        //dd($game);
+        return view('pages.games.bugs.index', compact('game'));
     }
 
     /**
@@ -45,11 +47,13 @@ class BugController extends Controller
      * Display the specified resource.
      *
      * @param Bug $bug
+     * @param Game $game
      * @return Response
      */
-    public function show(Bug $bug)
+    public function show(Game $game)
     {
-        //
+        $game->load('bugs');
+        return view('pages.games.show', compact('game'));
     }
 
     /**
