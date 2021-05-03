@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\BugController;
+use App\Http\Controllers\GameController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\SpeedrunController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 
@@ -21,10 +24,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('buglink64', [HomeController::class, 'index'])->name('buglink64.index');
-
 Route::get('contact', [ContactController::class, 'create'])->name('contact.create');
-
 Route::get('login', [LoginController::class, 'create'])->name('login.create');
-
 Route::get('post', [PostController::class, 'create']);
+
+Route::get('games', [GameController::class, 'index'])->name('games.index');
+Route::get('games/{game:slug}', [GameController::class, 'show'])->name('games.show');
+Route::get('games/{game:slug}/edit', [GameController::class, 'edit'])->name('games.edit');
+Route::get('games/{game:slug}/destroy', [GameController::class, 'destroy'])->name('games.destroy');
+
+Route::get('games/{game:slug}/bugs', [BugController::class, 'index'])->name('games.bugs.index');
+Route::get('games/{game:slug}/speedruns', [SpeedrunController::class, 'index'])->name('games.speedruns.index');

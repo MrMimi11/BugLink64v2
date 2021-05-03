@@ -5,12 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Login extends Model
+class Speedrun extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'pseudo', 'email', 'password'
+      'name', 'slug', 'video'
     ];
-
 }

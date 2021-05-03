@@ -10,4 +10,15 @@ class HomeController extends Controller
     {
         return view('home.index');
     }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param Home $home
+     * @return Response
+     */
+    public function show(Home $home)
+    {
+        return view('home.show', compact('home'));
+    }
 }

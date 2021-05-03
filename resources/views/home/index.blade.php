@@ -51,7 +51,7 @@
 
     <!-- choice ocarina of time and majora's mask -->
     <div class="titrejeux d-flex justify-content-around mt-5">
-        <div><u> <a href="#">The Legend of Zelda: ocarina of time</a></u></div>
+        <div><u> <a href="{{ route('home.show') }}">The Legend of Zelda: ocarina of time</a></u></div>
         <div><u> <a href="#">The Legend of Zelda: Majora's Mask</a></u></div>
     </div>
 

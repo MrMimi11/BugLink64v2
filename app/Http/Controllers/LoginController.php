@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class LoginController extends Controller
 {
-    public function create(Login $login)
+    public function create()
     {
         return view('login.create', compact('login'));
     }
