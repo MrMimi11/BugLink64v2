@@ -28,7 +28,7 @@ Route::get('home', [HomeController::class, 'index'])->name('home.index');
 
 Route::get('contact', [ContactController::class, 'create'])->name('contact.create');
 Route::get('login', [LoginController::class, 'create'])->name('login.create');
-Route::get('post', [PostController::class, 'create']);
+Route::get('post', [PostController::class, 'create'])->name('post.postbug');
 
 Route::get('home/games', [GameController::class, 'index'])->name('games.index');
 Route::get('home/games/{game:slug}', [GameController::class, 'show'])->name('games.show');
