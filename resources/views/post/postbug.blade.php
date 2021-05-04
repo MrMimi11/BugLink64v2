@@ -25,20 +25,21 @@
         <span class="text-danger text-sm">{{ $message }}</span>
         @enderror
         <br>
+{{--        Select categories--}}
         <div class="chosecategories">
             <label for="categories">Select a categorie(s)</label>
         </div>
         <div class="row d-flex justify-content-around">
             <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="any">
+                <input type="checkbox" class="form-check-input" id="any" title="Any%">
                 <label class="form-check-label" for="any">Any%</label>
             </div>
             <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="onehundred">
+                <input type="checkbox" class="form-check-input" id="onehundred" title="100%">
                 <label class="form-check-label" for="onehundred">100%</label>
             </div>
             <div class="form-check">
-                <input type="checkbox" class="form-check-input" id="glitchless">
+                <input type="checkbox" class="form-check-input" id="glitchless" title="glitchless">
                 <label class="form-check-label" for="glitchless">Glitchless</label>
             </div>
             <div class="form-check">
@@ -60,12 +61,13 @@
             <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="nowrongwarp">
                 <label class="form-check-label" for="nowrongwarp">No Wrong Warp</label>
-            </div>  <div class="form-check">
+            </div>
+            <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="autres">
                 <label class="form-check-label" for="autres">Autres</label>
             </div>
         </div>
 
-        <button class="btn btn-primary float-right" type="submit">Envoyer</button>
+        <button class="btn btn-primary float-right mt-4" type="submit">Envoyer</button>
     </form>
 @endsection

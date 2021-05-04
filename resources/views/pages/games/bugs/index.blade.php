@@ -83,7 +83,7 @@
         <div class="tab-pane fade" id="pills-autres" role="tabpanel" aria-labelledby="pills-autres-tab">Autres</div>
     </div>
 
-
+{{--    List of bug--}}
     <ul>
         @foreach($game->bugs as $bug)
             <li><a href="/">{{ $bug->name }}</a></li>

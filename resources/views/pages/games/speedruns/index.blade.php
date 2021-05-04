@@ -105,6 +105,7 @@
         <div class="tab-pane fade" id="pills-autres" role="tabpanel" aria-labelledby="pills-autres-tab">Autres</div>
     </div>
 
+{{--    List of speedrun--}}
     <ul>
         @foreach($game->speedruns as $speedrun)
             <li><a href="/">{{ $speedrun->name }}</a></li>
