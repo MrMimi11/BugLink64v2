@@ -10,6 +10,6 @@ class Bug extends Model
     use HasFactory;
 
     protected $fillable = [
-      'name', 'slug', 'description', 'video'
+      'title', 'slug', 'description', 'video', 'game_id'
     ];
 }

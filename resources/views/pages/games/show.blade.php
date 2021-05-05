@@ -12,7 +12,7 @@
         <a href="{{ route('games.bugs.index', $game->slug) }}">Bugs</a>
         <a href="{{ route('games.speedruns.index', $game->slug) }}">Speedruns</a>
     </div>
-    <div class="row d-flex justify-content-around">
+    <div class="row d-flex justify-content-aro und">
             <img src="{{ $game->image }}" alt="">
             <img src="{{ $game->image }}" alt="">
     </div>

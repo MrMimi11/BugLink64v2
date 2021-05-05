@@ -15,7 +15,7 @@ class Game extends Model
 
     public function bugs()
     {
-        return $this->hasMany(Bug::class);
+        return $this->hasMany(Bug::class)->latest('updated_at');
     }
 
     public function speedruns()

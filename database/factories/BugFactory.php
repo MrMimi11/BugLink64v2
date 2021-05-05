@@ -22,10 +22,10 @@ class BugFactory extends Factory
      */
     public function definition()
     {
-        $name = $this->faker->numerify('bug-####');
+        $title = $this->faker->numerify('bug-####');
         return [
-            'name' => $name,
-            'slug' => Str::slug($name),
+            'title' => $title,
+            'slug' => Str::slug($title),
             'description' => $this->faker->paragraph(3),
             'video' => 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
         ];

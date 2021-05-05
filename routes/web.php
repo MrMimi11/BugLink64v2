@@ -28,7 +28,6 @@ Route::get('home', [HomeController::class, 'index'])->name('home.index');
 
 Route::get('contact', [ContactController::class, 'create'])->name('contact.create');
 Route::get('login', [LoginController::class, 'create'])->name('login.create');
-Route::get('post', [PostController::class, 'create'])->name('post.postbug');
 
 Route::get('home/games', [GameController::class, 'index'])->name('games.index');
 Route::get('home/games/{game:slug}', [GameController::class, 'show'])->name('games.show');
@@ -36,4 +35,9 @@ Route::get('home/games/{game:slug}/edit', [GameController::class, 'edit'])->name
 Route::get('home/games/{game:slug}/destroy', [GameController::class, 'destroy'])->name('games.destroy');
 
 Route::get('home/games/{game:slug}/bugs', [BugController::class, 'index'])->name('games.bugs.index');
+Route::get('home/games/{game:slug}/bugs/create', [BugController::class, 'create'])->name('games.bugs.create');
+Route::post('home/games/{game:slug}/bugs', [BugController::class, 'store'])->name('games.bugs.store');
+Route::post('home/games/{game:slug}/bugs/{bug:slug}', [BugController::class, 'update'])->name('games.bugs.update');
+Route::get('home/games/{game:slug}/bugs/{bug:slug}', [BugController::class, 'show'])->name('games.bugs.show');
+
 Route::get('home/games/{game:slug}/speedruns', [SpeedrunController::class, 'index'])->name('games.speedruns.index');

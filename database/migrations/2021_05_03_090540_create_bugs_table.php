@@ -15,7 +15,7 @@ class CreateBugsTable extends Migration
     {
         Schema::create('bugs', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('title');
             $table->string('slug');
             $table->longText('description');
             $table->string('video');

@@ -1,13 +1,13 @@
 @extends('layouts.default')
 @section('content')
     <h2 class="text-center">Poster un bug</h2>
-    <form action="#" method="post" enctype="multipart/form-data">
+    <form action="{{ route('games.bugs.store', $game->slug) }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
-            <label for="titre">Titre</label>
-            <input type="text" class="form-control" id="titre">
+            <label for="title">Title</label>
+            <input type="text" name="title" class="form-control" id="title">
         </div>
-        @error('titre')
+        @error('title')
         <span class="text-danger text-sm">{{ $message }}</span>
         @enderror
         <div class="form-group">
@@ -19,13 +19,14 @@
         @enderror
         <div class="form-group">
             <label for="video">Video</label>
-            <input type="text" class="form-control" id="video">
+            <input type="text" name="video" class="form-control" id="video">
         </div>
         @error('video')
         <span class="text-danger text-sm">{{ $message }}</span>
         @enderror
         <br>
-{{--        Select categories--}}
+
+        {{--        Select categories--}}
         <div class="chosecategories">
             <label for="categories">Select a categorie(s)</label>
         </div>

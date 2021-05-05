@@ -94,7 +94,7 @@
     {{--    List of bug--}}
     <ul>
         @foreach($game->bugs as $bug)
-            <li><a href="{{ route('games.bugs.show', [$game->slug, $bug->slug]) }}">{{ $bug->title }}</a></li>
+            <li><a href="/">{{ $bug->title }}</a></li>
         @endforeach
     </ul>
 @endsection
