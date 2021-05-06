@@ -1,100 +1,53 @@
 @extends('layouts.default')
 @section('content')
-    <div class="title">
-        <h1 class="text-center">{{ $game->name }}</h1>
+
+    <div class="title_bug">
+        <h1 class="text-center mb-4">{{ $game->name }}</h1>
     </div>
-    {{--    <img src="{{ $game->image }}" alt="">--}}
-    <p>{{ $game->description }}</p>
+
+    <div class="title_bug">
+        <h2 class="text-center mb-5"><u> {{ $bug->title }}</u></h2>
+    </div>
+
+{{--    <p>{{ $game->description }}</p>--}}
+{{--        <div class="embed-responsive embed-responsive-16by9">--}}
+{{--            <iframe class="embed-responsive-item" src="{{ $bug->video }}" allowfullscreen></iframe>--}}
+{{--        </div>--}}
+
+{{--            <iframe width="300" height="220" src="{{ $bug->video }}" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>--}}
+
+{{--            <iframe src="{{ url($bug->video) }}" width="560" height="315" frameborder="0" allowfullscreen></iframe>--}}
+{{--        </div>--}}
+{{--        <video >--}}
+{{--            <source src="{{ $bug->video }}" type="video/mp4" />--}}
+{{--        </video>--}}
+{{--        <iframe width="420" height="345" src="https://www.youtube.com/em/tgbNymZ7vqY"></iframe>--}}
+{{--        <iframe width="400" height="300"--}}
+{{--                src="{{ $bug->video }}" frameborder="0"--}}
+{{--                gesture="media" allow="encrypted-media" allowfullscreen=""></iframe>--}}
+{{--        <iframe width="560" height="315" src="https://www.youtube.com/embed/" {{ $bug->video }} frameborder="0" gesture="media" allow="autoplay; encrypted-media" allowfullscreen></iframe>--}}
+{{--        <iframe width="560" height="315" src="{{ $bug->video }}" frameborder="0" gesture="media" allow="autoplay; encrypted-media" allowfullscreen></iframe>--}}
+
+{{--        <embed src="{{ $bug->video }}" quality="medium"--}}
+{{--               bgcolor="#ffffff" width="550" height="400"--}}
+{{--               name="whoosh" align="middle" allowScriptAccess="sameDomain"--}}
+{{--               allowFullScreen="false"--}}
+{{--               pluginspage="http://www.macromedia.com/go/getflashplayer">--}}
+{{--        <object width="425" height="350" data="{{ $bug->video }}" type="application/x-shockwave-flash"><param name="src" value="{{ $bug->video }}" /></object>--}}
+
+{{--        <iframe src="blob:{{ url($bug->video) }}" width="560" height="315" frameborder="0" allowfullscreen></iframe>--}}
+{{--    <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>--}}
 
     {{--    Post a bug and search bar--}}
-    <div class="row d-flex justify-content-between align-items-center mb-4">
-        <div>
-            <a href="{{ route('games.bugs.create', $game->slug) }}" class="button btn btn-primary">Post a bug</a>
-        </div>
-        <div>
-            <nav class="navbar navbar-light">
-                <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-                </form>
-            </nav>
-        </div>
-    </div>
 
-    {{--    All categories--}}
-    <div>
-        <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-            <li class="nav-item">
-                <a class="nav-link active" id="pills-all-tab" data-toggle="pill" href="#pills-all" role="tab"
-                   aria-controls="pills-all" aria-selected="true">All</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="pills-any-tab" data-toggle="pill" href="#pills-any" role="tab"
-                   aria-controls="pills-any" aria-selected="false">Any%</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="pills-onehundred-tab" data-toggle="pill" href="#pills-onehundred" role="tab"
-                   aria-controls="pills-onehundred" aria-selected="false">100%</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="pills-glitchless-tab" data-toggle="pill" href="#pills-glitchless" role="tab"
-                   aria-controls="pills-glitchless" aria-selected="false">Glitchless</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="pills-alldungeons-tab" data-toggle="pill" href="#pills-alldungeons" role="tab"
-                   aria-controls="pills-alldungeons" aria-selected="false">All Dungeons</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="pills-gsr-tab" data-toggle="pill" href="#pills-gsr" role="tab"
-                   aria-controls="pills-gsr" aria-selected="false">GSR</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="pills-mst-tab" data-toggle="pill" href="#pills-mst" role="tab"
-                   aria-controls="pills-mst" aria-selected="false">MST</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="pills-defeatganon-tab" data-toggle="pill" href="#pills-defeatganon" role="tab"
-                   aria-controls="pills-defeatganon" aria-selected="false">Deafeat Ganon</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="pills-nowrongwarp-tab" data-toggle="pill" href="#pills-nowrongwarp" role="tab"
-                   aria-controls="pills-nowrongwarp" aria-selected="false">No Wrong Warp</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" id="pills-autres-tab" data-toggle="pill" href="#pills-autres" role="tab"
-                   aria-controls="pills-autres" aria-selected="false">Autres</a>
-            </li>
-        </ul>
-    </div>
-    <div class="tab-content" id="pills-tabContent">
-        <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
-            <div class="desc">All</div>
+        <div class="row">
+            <div class="d-flex bd-highlight">
+                <div class="mr-4 flex-fill bd-highlight">
+                    <iframe width="550" height="400" src="{{ $bug->video . "&output=embed" }}" frameborder="0"
+                            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    <a href="{{ route('games.bugs.index', $game->slug) }}" class="mt-5">🡰 Revenir a la liste des bugs</a>
+                </div>
+                <div class="flex-fill bd-highlight">{{ $bug->description }}</div>
+            </div>
         </div>
-        <div class="tab-pane fade" id="pills-any" role="tabpanel" aria-labelledby="pills-any-tab">Any%</div>
-        <div class="tab-pane fade" id="pills-onehundred" role="tabpanel" aria-labelledby="pills-onehundred-tab">
-            <div class="desc">100%</div>
-        </div>
-        <div class="tab-pane fade" id="pills-glitchless" role="tabpanel" aria-labelledby="pills-glitchless-tab">
-            <div>glitchless</div>
-        </div>
-        <div class="tab-pane fade" id="pills-alldungeons" role="tabpanel" aria-labelledby="pills-alldungeons-tab">All
-            Dungeons
-        </div>
-        <div class="tab-pane fade" id="pills-gsr" role="tabpanel" aria-labelledby="pills-gsr-tab">GSR</div>
-        <div class="tab-pane fade" id="pills-mst" role="tabpanel" aria-labelledby="pills-mst-tab">MST</div>
-        <div class="tab-pane fade" id="pills-defeatganon" role="tabpanel" aria-labelledby="pills-defeatganon-tab">
-            Deafeat Ganon
-        </div>
-        <div class="tab-pane fade" id="pills-nowrongwarp" role="tabpanel" aria-labelledby="pills-nowrongwarp-tab">No
-            Wrong Warp
-        </div>
-        <div class="tab-pane fade" id="pills-autres" role="tabpanel" aria-labelledby="pills-autres-tab">Autres</div>
-    </div>
-
-    {{--    List of bug--}}
-    <ul>
-        @foreach($game->bugs as $bug)
-            <li><a href="/">{{ $bug->title }}</a></li>
-        @endforeach
-    </ul>
 @endsection

@@ -81,7 +81,7 @@
             Dungeons
         </div>
         <div class="tab-pane fade" id="pills-gsr" role="tabpanel" aria-labelledby="pills-gsr-tab">GSR</div>
-        <div class="tab-pane fade" id="pills-mst" role="tabpanel" aria-labelledby="pills-mst-tab">MST</div>
+        <div class="tab-pane fade" id="pills-mst" role="tabpanel" aria-labelledby="pills-mst-tab">Medaillon Stone Trial</div>
         <div class="tab-pane fade" id="pills-defeatganon" role="tabpanel" aria-labelledby="pills-defeatganon-tab">
             Deafeat Ganon
         </div>
@@ -92,9 +92,24 @@
     </div>
 
     {{--    List of bug--}}
-    <ul>
-        @foreach($game->bugs as $bug)
-            <li><a href="{{ route('games.bugs.show', [$game->slug, $bug->slug]) }}">{{ $bug->title }}</a></li>
-        @endforeach
-    </ul>
+    @foreach($game->bugs as $bug)
+        <div class="border w-100 mb-3">
+            <div class="d-flex p-3">
+                <iframe width="150" height="150" src="{{ $bug->video . "&output=embed" }}" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                <div class="ml-3">
+                    <h4>
+                       {{ $bug->title }}
+                    </h4>
+                    <div>
+                        {{  \Illuminate\Support\Str::limit($bug->description, 200) }}
+                    </div>
+                </div>
+                <div class="col-2 d-flex justify-content-end flex-column">
+                    <button type="button" class="btn btn-info "><a href="{{ route('games.bugs.show', [$game->slug, $bug->slug]) }}" class="text-white">See this bug</a></button>
+                </div>
+            </div>
+        </div>
+
+    @endforeach
 @endsection

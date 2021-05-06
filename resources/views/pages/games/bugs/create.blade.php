@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('content')
-    <h2 class="text-center">Poster un bug</h2>
+    <h2 class="text-center">Post a bug</h2>
     <form action="{{ route('games.bugs.store', $game->slug) }}" method="post" enctype="multipart/form-data">
         @csrf
         <div class="form-group">
