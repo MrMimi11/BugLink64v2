@@ -71,36 +71,41 @@ class BugController extends Controller
      * Show the form for editing the specified resource.
      *
      * @param Bug $bug
+     * @param Game $game
      * @return Response
      */
-    public function edit(Bug $bug)
+    public function edit(Game $game, Bug $bug)
     {
-        //
+        return view('pages.games.bugs.edit', compact('bug', 'game'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param Request $request
+     * @param Game $game
      * @param Bug $bug
-     * @return Response
+     * @return void
      */
-    public function update(Request $request, Bug $bug)
+    public function update(Request $request, Game $game, Bug $bug)
     {
         $bug->update($request->all());
-        redirect()->route('pages.games.bugs.index');
+        redirect()->route('games.bugs.index', compact('game'));
     }
 
     /**
      * Remove the specified resource from storage.
      *
+     * @param Game $game
      * @param Bug $bug
      * @return Response
      */
-    public function destroy(Bug $bug)
+    public function destroy(Game $game, Bug $bug) //variable du model
     {
-        //
+        $bug->delete();
+        return redirect()->route('games.bugs.index', compact('game'));
     }
+
 
     /**
      * Remove the specified resource from storage.

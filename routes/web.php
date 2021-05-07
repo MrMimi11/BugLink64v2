@@ -40,5 +40,7 @@ Route::post('home/games/{game:slug}/bugs', [BugController::class, 'store'])->nam
 Route::get('home/games/{game:slug}/bugs/search', [BugController::class, 'search'])->name('games.bugs.search');
 Route::post('home/games/{game:slug}/bugs/{bug:slug}', [BugController::class, 'update'])->name('games.bugs.update');
 Route::get('home/games/{game:slug}/bugs/{bug:slug}', [BugController::class, 'show'])->name('games.bugs.show');
+Route::get('home/games/{game:slug}/bugs/{bug:slug}/edit', [BugController::class, 'edit'])->name('games.bugs.edit');
+Route::get('home/games/{game:slug}/bugs/{bug:slug}/delete', [BugController::class, 'destroy'])->name('games.bugs.delete');
 
 Route::get('home/games/{game:slug}/speedruns', [SpeedrunController::class, 'index'])->name('games.speedruns.index');

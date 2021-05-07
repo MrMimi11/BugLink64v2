@@ -101,11 +101,9 @@
                     </div>
                 </div>
                 <div class="col-2 d-flex justify-content-end flex-column">
-                    <button type="button" class="btn btn-info "><a href="{{ route('games.bugs.show', [$game->slug, $bug->slug]) }}" class="text-white">See this bug</a></button>
-                </div>
-                <div class="col-2 d-flex justify-content-end flex-column">
-                    <button type="button" class="btn btn-info mb-3 "><a href="{{ route('games.bugs.show', [$game->slug, $bug->slug]) }}" class="text-white">Edit</a></button>
-                    <button type="button" class="btn btn-info "><a href="{{ route('games.bugs.show', [$game->slug, $bug->slug]) }}" class="text-white">Delete</a></button>
+                    <a href="{{ route('games.bugs.edit', [$game->slug, $bug->slug]) }}" class="text-white"><button type="button" class="btn btn-info mb-3 w-100">Edit</button></a>
+                    <a href="{{ route('games.bugs.delete', [$game->slug, $bug->slug]) }}" class="text-white"><button type="button" class="btn btn-info mb-3 w-100">Delete</button></a>
+                    <a href="{{ route('games.bugs.show', [$game->slug, $bug->slug]) }}" class="text-white"><button type="button" class="btn btn-info w-100">See this bug</button></a>
                 </div>
             </div>
         </div>

@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0210e47d-3f36-4ff4-ba5c-b12f6794e8f7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/games/bugs/edit.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/games/bugs/resultsearch.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/pages/games/bugs/search.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BugController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BugController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/BugRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/BugRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/GameFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/GameFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/games/bugs/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/games/bugs/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/pages/games/bugs/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/games/bugs/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/games/bugs/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/games/bugs/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/games/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/games/show.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,10 +61,22 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/web.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="555">
+              <caret line="40" column="81" selection-start-line="40" selection-start-column="81" selection-end-line="40" selection-end-column="81" />
+              <folding>
+                <element signature="e#7#46#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BugController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="581">
-              <caret line="116" column="26" selection-start-line="116" selection-start-column="26" selection-end-line="116" selection-end-column="26" />
+            <state relative-caret-position="503">
+              <caret line="90" column="5" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
               <folding>
                 <element signature="e#40#73#0#PHP" expanded="true" />
               </folding>
@@ -78,44 +85,21 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Models/Bug.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="12" column="55" selection-start-line="12" selection-start-column="55" selection-end-line="12" selection-end-column="55" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Requests/BugRequest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="581">
-              <caret line="27" column="53" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_03_090540_create_bugs_table.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/games/bugs/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="659">
-              <caret line="107" column="157" selection-start-line="107" selection-start-column="157" selection-end-line="107" selection-end-column="157" />
+            <state relative-caret-position="593">
+              <caret line="106" column="22" selection-start-line="106" selection-start-column="22" selection-end-line="107" selection-end-column="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/games/bugs/edit.blade.php">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="78">
+              <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -130,8 +114,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/pages/games/bugs/resultsearch.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="95" column="76" selection-start-line="95" selection-start-column="76" selection-end-line="95" selection-end-column="76" />
+            <state relative-caret-position="541">
+              <caret line="113" column="126" selection-start-line="113" selection-start-column="101" selection-end-line="113" selection-end-column="126" />
             </state>
           </provider>
         </entry>
@@ -188,15 +172,16 @@
         <option value="$PROJECT_DIR$/resources/views/post/postbug.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Game.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/games/bugs/show.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/games/bugs/create.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/games/bugs/resultsearch.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/BugController.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/games/bugs/search.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/games/show.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/BugRequest.php" />
         <option value="$PROJECT_DIR$/database/factories/GameFactory.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/games/bugs/create.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/games/bugs/index.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/BugController.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/games/bugs/edit.blade.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
       </list>
     </option>
   </component>
@@ -313,10 +298,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="732" />
-    <option name="y" value="11" />
-    <option name="width" value="1117" />
-    <option name="height" value="1056" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -543,7 +527,7 @@
       <workItem from="1620198356556" duration="24135000" />
       <workItem from="1620284692983" duration="21633000" />
       <workItem from="1620328857569" duration="11750000" />
-      <workItem from="1620370176236" duration="6751000" />
+      <workItem from="1620370176236" duration="15002000" />
     </task>
     <task id="LOCAL-00001" summary="Create route, controller and view for home page">
       <created>1619512613225</created>
@@ -556,7 +540,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="150500000" />
+    <option name="totallyTimeSpent" value="158751000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -582,7 +566,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.075159915" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.1337953" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -786,23 +770,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/games/bugs/create.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-416">
-          <caret line="2" column="34" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="36" column="98" selection-start-line="36" selection-start-column="82" selection-end-line="36" selection-end-column="98" />
-          <folding>
-            <element signature="e#7#46#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/games/bugs/search.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="26">
@@ -848,16 +815,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BugController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="581">
-          <caret line="116" column="26" selection-start-line="116" selection-start-column="26" selection-end-line="116" selection-end-column="26" />
-          <folding>
-            <element signature="e#40#73#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Requests/BugRequest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="581">
@@ -893,10 +850,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/games/bugs/resultsearch.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/games/bugs/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="95" column="76" selection-start-line="95" selection-start-column="76" selection-end-line="95" selection-end-column="76" />
+        <state relative-caret-position="182">
+          <caret line="7" column="85" selection-start-line="7" selection-start-column="85" selection-end-line="7" selection-end-column="85" />
         </state>
       </provider>
     </entry>
@@ -907,15 +864,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/games/bugs/index.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/games/bugs/resultsearch.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="107" column="157" selection-start-line="107" selection-start-column="157" selection-end-line="107" selection-end-column="157" />
+        <state relative-caret-position="541">
+          <caret line="113" column="126" selection-start-line="113" selection-start-column="101" selection-end-line="113" selection-end-column="126" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/games/bugs/edit.blade.php">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="3" column="45" selection-start-line="3" selection-start-column="45" selection-end-line="3" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="40" column="81" selection-start-line="40" selection-start-column="81" selection-end-line="40" selection-end-column="81" />
+          <folding>
+            <element signature="e#7#46#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/games/bugs/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="593">
+          <caret line="106" column="22" selection-start-line="106" selection-start-column="22" selection-end-line="107" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BugController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="90" column="5" selection-start-line="90" selection-start-column="5" selection-end-line="90" selection-end-column="5" />
+          <folding>
+            <element signature="e#40#73#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
