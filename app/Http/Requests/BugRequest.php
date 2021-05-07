@@ -25,7 +25,7 @@ class BugRequest extends FormRequest
     {
         return [
             'title' => 'required|string',
-            'description' => 'required|string',
+            'description' => 'required|string|min:200',
             'video' => 'required|string',
         ];
     }

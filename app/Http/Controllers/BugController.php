@@ -101,4 +101,23 @@ class BugController extends Controller
     {
         //
     }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param Bug $bug
+     * @param Game $game
+     * @return Response
+     */
+    public function search(Bug $bug, Game $game)
+    {
+        $q = request()->input('q');
+        $bugs = Bug::where('title', 'like', "%$q%")
+            ->orWhere('description', 'like', "%$q%")
+            ->paginate(6);
+        //dd($bugs);
+
+        return view('pages.games.bugs.resultsearch', compact('game'))->with('bugs', $bugs);
+    }
 }
+

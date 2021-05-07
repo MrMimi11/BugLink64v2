@@ -27,7 +27,7 @@ class GameFactory extends Factory
             'name' => $name,
             'slug' => Str::slug($name),
             'image' => $this->faker->imageUrl(),
-            'description' => $this->faker->paragraph(3)
+            'description' => $this->faker->paragraph(6)
         ];
     }
 }

@@ -12,7 +12,13 @@
             <a href="{{ route('games.bugs.create', $game->slug) }}" class="button btn btn-primary">Post a bug</a>
         </div>
         <div>
-            @include('pages.games.bugs.search')
+            <nav class="navbar navbar-light">
+                <form action="{{ route('games.bugs.search', $game->slug) }}" class="form-inline" type="get">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="query" value="{{ request()->q ?? '' }}"> {{--keep the text in the search bar--}}
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </nav>
+
         </div>
     </div>
 
@@ -86,6 +92,10 @@
         <div class="tab-pane fade" id="pills-autres" role="tabpanel" aria-labelledby="pills-autres-tab">Autres</div>
     </div>
 
+    @if(request()->input('q'))
+        <h6>{{ $bugs->total() }} Result(s) of the search "{{ request()->q }}"</h6>
+        @endif
+
     {{--    List of bug--}}
     @foreach($game->bugs as $bug)
         <div class="border w-100 mb-3">
@@ -94,7 +104,7 @@
                         allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 <div class="ml-3">
                     <h4>
-                       {{ $bug->title }}
+                        {{ $bug->title }}
                     </h4>
                     <div>
                         {{  \Illuminate\Support\Str::limit($bug->description, 200) }}
@@ -102,10 +112,6 @@
                 </div>
                 <div class="col-2 d-flex justify-content-end flex-column">
                     <button type="button" class="btn btn-info "><a href="{{ route('games.bugs.show', [$game->slug, $bug->slug]) }}" class="text-white">See this bug</a></button>
-                </div>
-                <div class="col-2 d-flex justify-content-end flex-column">
-                    <button type="button" class="btn btn-info mb-3 "><a href="{{ route('games.bugs.show', [$game->slug, $bug->slug]) }}" class="text-white">Edit</a></button>
-                    <button type="button" class="btn btn-info "><a href="{{ route('games.bugs.show', [$game->slug, $bug->slug]) }}" class="text-white">Delete</a></button>
                 </div>
             </div>
         </div>

@@ -37,6 +37,7 @@ Route::get('home/games/{game:slug}/destroy', [GameController::class, 'destroy'])
 Route::get('home/games/{game:slug}/bugs', [BugController::class, 'index'])->name('games.bugs.index');
 Route::get('home/games/{game:slug}/bugs/create', [BugController::class, 'create'])->name('games.bugs.create');
 Route::post('home/games/{game:slug}/bugs', [BugController::class, 'store'])->name('games.bugs.store');
+Route::get('home/games/{game:slug}/bugs/search', [BugController::class, 'search'])->name('games.bugs.search');
 Route::post('home/games/{game:slug}/bugs/{bug:slug}', [BugController::class, 'update'])->name('games.bugs.update');
 Route::get('home/games/{game:slug}/bugs/{bug:slug}', [BugController::class, 'show'])->name('games.bugs.show');
 
