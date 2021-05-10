@@ -29,9 +29,9 @@ class BugController extends Controller
      *
      * @return Response
      */
-    public function create(Game $game)
+    public function create(Game $game, Bug $bug)
     {
-        return view('pages.games.bugs.create', compact('game'));
+        return view('pages.games.bugs.create', compact('game', 'bug'));
     }
 
     /**
@@ -43,6 +43,7 @@ class BugController extends Controller
      */
     public function store(BugRequest $request, Game $game)
     {
+        // comme ici
         $title = $request->input('title');
         Bug::create([
             'title' => $title,
@@ -76,7 +77,7 @@ class BugController extends Controller
      */
     public function edit(Game $game, Bug $bug)
     {
-        return view('pages.games.bugs.edit', compact('bug', 'game'));
+        return view('pages.games.bugs.edit', compact('game', 'bug'));
     }
 
     /**
@@ -89,8 +90,15 @@ class BugController extends Controller
      */
     public function update(Request $request, Game $game, Bug $bug)
     {
-        $bug->update($request->all());
-        redirect()->route('games.bugs.index', compact('game'));
+        $title = $request->input('title');
+        $bug->update([
+            'title' => $title,
+            'slug' => Str::slug($title),
+            'game_id' => $game->id,
+            'description'=> $request->input('description'),
+            'video'=> $request->input('video'),
+        ]);
+        return redirect()->route('games.bugs.index', [$game->slug, $bug->slug]);
     }
 
     /**
@@ -119,7 +127,7 @@ class BugController extends Controller
         $q = request()->input('q');
         $bugs = Bug::where('title', 'like', "%$q%")
             ->orWhere('description', 'like', "%$q%")
-            ->paginate(6);
+            ->paginate(0);
         //dd($bugs);
 
         return view('pages.games.bugs.resultsearch', compact('game'))->with('bugs', $bugs);
