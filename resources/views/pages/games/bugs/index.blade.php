@@ -90,7 +90,7 @@
     @foreach($game->bugs as $bug)
         <div class="border w-100 mb-3">
             <div class="d-flex p-3">
-                <iframe width="150" height="150" src="{{ $bug->video . "&output=embed" }}" frameborder="0"
+                <iframe width="150" height="150" src="{{ $bug->video }}" frameborder="0"
                         allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 <div class="ml-3">
                     <h4>

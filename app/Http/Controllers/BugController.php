@@ -21,6 +21,10 @@ class BugController extends Controller
     {
         $game->load('bugs');
         //dd($game);
+        foreach ($game->bugs as $bug)
+        {
+            $bug->video= str_replace('watch?v=', 'embed/', $bug->video);
+        }
         return view('pages.games.bugs.index', compact('game'));
     }
 
@@ -65,6 +69,7 @@ class BugController extends Controller
     public function show(Game $game, Bug $bug)
     {
         $game->load('bugs');
+        $bug->video= str_replace('watch?v=', 'embed/', $bug->video);
         return view('pages.games.bugs.show', compact('game', 'bug'));
     }
 
@@ -91,12 +96,13 @@ class BugController extends Controller
     public function update(Request $request, Game $game, Bug $bug)
     {
         $title = $request->input('title');
+        $goodurl = str_replace('watch?v=', 'embed/', $request->input('video'));
         $bug->update([
             'title' => $title,
             'slug' => Str::slug($title),
             'game_id' => $game->id,
             'description'=> $request->input('description'),
-            'video'=> $request->input('video'),
+            'video'=> $goodurl
         ]);
         return redirect()->route('games.bugs.index', [$game->slug, $bug->slug]);
     }

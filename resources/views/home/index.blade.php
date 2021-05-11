@@ -3,7 +3,7 @@
     <h1 class="text-center">BugLink64</h1>
 
     <!-- news -->
-    <h3 class="text-center mt-5">Actualités</h3>
+    <h3 class="text-center mt-5">News</h3>
     <div class="d-flex justify-content-around mt-4">
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="..." alt="Card image cap">
