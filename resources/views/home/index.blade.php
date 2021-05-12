@@ -51,6 +51,13 @@
     <!-- choice ocarina of time and majora's mask -->
 
     <div class="titrejeux d-flex justify-content-around mt-5">
+        @foreach($games as $game)
+            <li>
+                <a href="{{ route('games.show', $game->slug) }}">{{ $game->name }}</a>
+                <a style="color: deepskyblue;" href="{{ route('games.edit', $game->slug) }}">Edit</a>
+                <a style="color: red;" href="{{ route('games.destroy', $game->slug) }}">Delete</a>
+            </li>
+        @endforeach
         <div><u> <a href="#">The Legend of Zelda: ocarina of time</a></u></div>
         <div><u> <a href="#">The Legend of Zelda: Majora's Mask</a></u></div>
     </div>

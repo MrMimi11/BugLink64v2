@@ -2,5 +2,36 @@ div.centre{
     font-size: 18px;
 }
 
+@media only screen and (max-width: 640px) {
+    .contentbug {
+        flex-direction: column;
+    }
+    .videobug {
+        width: 100%;
+        height: 100%;
+        margin-left: 11px;
+        margin-bottom: 2em;
+    }
+
+    .descbug {
+        margin-top: 5em;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .contentbug {
+        flex-direction: column;
+    }
+    .videobug {
+        width: 100%;
+        height: 200%;
+        margin-left: 11px;
+        margin-bottom: 2em;
+    }
+
+    .descbug {
+        margin-top: 18em;
+    }
+}
+
 
 

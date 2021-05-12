@@ -41,11 +41,11 @@
     {{--    Post a bug and search bar--}}
 
     <div class="row">
-        <div class="d-flex bd-highlight">
+        <div class="d-flex bd-highlight contentbug">
             <div class="mr-4 flex-fill bd-highlight">
                 <iframe width="550" height="400" src="{{ $bug->video }}" frameborder="0"
-                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                <a href="{{ route('games.bugs.index', $game->slug) }}" class="mt-5 backbug">🡰 Back to the list of
+                        allow="autoplay; encrypted-media" allowfullscreen class="videobug"></iframe>
+                <a href="{{ route('games.bugs.index', $game->slug) }}" class="mt-2 backbug">🡰 Back to the list of
                     bugs</a>
             </div>
             <div class="flex-fill bd-highlight descbug">{{ $bug->description }}</div>
