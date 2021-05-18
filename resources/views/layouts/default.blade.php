@@ -29,7 +29,7 @@
                     <a class="nav-link active" aria-current="page" href="#">A propos</a>
                 </li>
                 <li class="nav-item ml-auto">
-                    <img class="nav-link active" aria-current="page" src="../views/image/Logo maquettage.png">
+                    <img class="nav-link active" aria-current="page" src="/image/Logo maquettage.png">
                 </li>
                 <li class="nav-item ml-auto">
                     <a class="nav-link active" aria-current="page" href="{{ route('login.create') }}">Se connecter/s'inscrire</a>

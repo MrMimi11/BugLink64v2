@@ -51,15 +51,15 @@
     <!-- choice ocarina of time and majora's mask -->
 
     <div class="titrejeux d-flex justify-content-around mt-5">
-        @foreach($games as $game)
-            <li>
-                <a href="{{ route('games.show', $game->slug) }}">{{ $game->name }}</a>
-                <a style="color: deepskyblue;" href="{{ route('games.edit', $game->slug) }}">Edit</a>
-                <a style="color: red;" href="{{ route('games.destroy', $game->slug) }}">Delete</a>
-            </li>
-        @endforeach
-        <div><u> <a href="#">The Legend of Zelda: ocarina of time</a></u></div>
-        <div><u> <a href="#">The Legend of Zelda: Majora's Mask</a></u></div>
+{{--        @foreach($games as $game)--}}
+{{--            <li>--}}
+{{--                <a href="{{ route('games.show', $game->slug) }}">{{ $game->name }}</a>--}}
+{{--                <a style="color: deepskyblue;" href="{{ route('games.edit', $game->slug) }}">Edit</a>--}}
+{{--                <a style="color: red;" href="{{ route('games.destroy', $game->slug) }}">Delete</a>--}}
+{{--            </li>--}}
+{{--        @endforeach--}}
+        <div class="linkgame"> <a href="{{ route('ocarina') }}">The Legend of Zelda: ocarina of time</a></div>
+        <div class="linkgame"> <a href="{{ route('majora') }}">The Legend of Zelda: Majora's Mask</a></div>
     </div>
 
     <div class="imagejeux d-flex justify-content-around">
@@ -77,7 +77,7 @@
         </div>
 
         <div><u>Réseau:</u>
-            <img src="../images/Discord-Logo-Color.svg" alt="logo discord">
+            <img src="{{ asset('images/Discord-Logo-Color.svg') }}" alt="logo discord">
         </div>
     </div>
 

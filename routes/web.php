@@ -20,27 +20,24 @@ use App\Http\Controllers\ContactController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('home', [HomeController::class, 'index'])->name('home.index');
+Route::get('', [HomeController::class, 'index'])->name('home.index');
 
 Route::get('contact', [ContactController::class, 'create'])->name('contact.create');
 Route::get('login', [LoginController::class, 'create'])->name('login.create');
+Route::get('ocarina', [HomeController::class, 'ocarina'])->name('ocarina');
+Route::get('majora', [HomeController::class, 'majora'])->name('majora');
+Route::get('games', [GameController::class, 'index'])->name('games.index');
+Route::get('{game:slug}', [GameController::class, 'show'])->name('games.show');
+Route::get('{game:slug}/edit', [GameController::class, 'edit'])->name('games.edit');
+Route::get('{game:slug}/destroy', [GameController::class, 'destroy'])->name('games.destroy');
 
-Route::get('home/games', [GameController::class, 'index'])->name('games.index');
-Route::get('home/games/{game:slug}', [GameController::class, 'show'])->name('games.show');
-Route::get('home/games/{game:slug}/edit', [GameController::class, 'edit'])->name('games.edit');
-Route::get('home/games/{game:slug}/destroy', [GameController::class, 'destroy'])->name('games.destroy');
+Route::get('{game:slug}/bugs', [BugController::class, 'index'])->name('games.bugs.index');
+Route::get('{game:slug}/bugs/create', [BugController::class, 'create'])->name('games.bugs.create');
+Route::post('{game:slug}/bugs', [BugController::class, 'store'])->name('games.bugs.store');
+Route::get('{game:slug}/bugs/search', [BugController::class, 'search'])->name('games.bugs.search');
+Route::post('{game:slug}/bugs/{bug:slug}', [BugController::class, 'update'])->name('games.bugs.update');
+Route::get('{game:slug}/bugs/{bug:slug}', [BugController::class, 'show'])->name('games.bugs.show');
+Route::get('{game:slug}/bugs/{bug:slug}/edit', [BugController::class, 'edit'])->name('games.bugs.edit');
+Route::get('{game:slug}/bugs/{bug:slug}/delete', [BugController::class, 'destroy'])->name('games.bugs.delete');
 
-Route::get('home/games/{game:slug}/bugs', [BugController::class, 'index'])->name('games.bugs.index');
-Route::get('home/games/{game:slug}/bugs/create', [BugController::class, 'create'])->name('games.bugs.create');
-Route::post('home/games/{game:slug}/bugs', [BugController::class, 'store'])->name('games.bugs.store');
-Route::get('home/games/{game:slug}/bugs/search', [BugController::class, 'search'])->name('games.bugs.search');
-Route::post('home/games/{game:slug}/bugs/{bug:slug}', [BugController::class, 'update'])->name('games.bugs.update');
-Route::get('home/games/{game:slug}/bugs/{bug:slug}', [BugController::class, 'show'])->name('games.bugs.show');
-Route::get('home/games/{game:slug}/bugs/{bug:slug}/edit', [BugController::class, 'edit'])->name('games.bugs.edit');
-Route::get('home/games/{game:slug}/bugs/{bug:slug}/delete', [BugController::class, 'destroy'])->name('games.bugs.delete');
-
-Route::get('home/games/{game:slug}/speedruns', [SpeedrunController::class, 'index'])->name('games.speedruns.index');
+Route::get('{game:slug}/speedruns', [SpeedrunController::class, 'index'])->name('games.speedruns.index');

@@ -1,6 +1,9 @@
 div.centre{
     font-size: 18px;
 }
+div.linkgame{
+    text-decoration: underline;
+}
 
 @media only screen and (max-width: 640px) {
     .contentbug {
@@ -15,6 +18,11 @@ div.centre{
 
     .descbug {
         margin-top: 5em;
+        margin-left: 15px;
+    }
+
+    a.backbug{
+        margin-left: 15px;
     }
 }
 @media only screen and (max-width: 800px) {

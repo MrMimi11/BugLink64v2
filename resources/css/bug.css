@@ -11,6 +11,11 @@
 
     .descbug {
         margin-top: 5em;
+        margin-left: 15px;
+    }
+
+    a.backbug{
+        margin-left: 15px;
     }
 }
 @media only screen and (max-width: 800px) {
