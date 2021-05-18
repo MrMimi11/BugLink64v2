@@ -76,8 +76,9 @@
             <p>Besoin d'aide? Vous pouvez me contacter <a href="{{ route('contact.create') }}">ici</a></p>
         </div>
 
-        <div><u>Réseau:</u>
-            <img src="{{ asset('images/Discord-Logo-Color.svg') }}" alt="logo discord">
+        <div class="row d-flex flex-nowrap justify-content-center network">
+            Network:
+                <img src="{{ asset('images/Discord-Logo-Color.svg') }}" alt="logo discord">
         </div>
     </div>
 

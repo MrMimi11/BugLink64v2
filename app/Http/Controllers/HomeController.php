@@ -37,7 +37,7 @@ class HomeController extends Controller
      */
     public function majora()
     {
-        $majora = Game::with('bugs')->where('slug', 'the-legend-of-zelda-majoras-mask')->first();
-        return [$majora];
+        $game = Game::with('bugs')->where('slug', 'the-legend-of-zelda-majoras-mask')->first();
+        return view('pages.games.show', compact('game'));
     }
 }

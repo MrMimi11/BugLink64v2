@@ -1,6 +1,12 @@
 div.centre{
     font-size: 18px;
 }
+
 div.linkgame{
     text-decoration: underline;
 }
+
+div.network {
+    text-decoration: underline;
+}
+
