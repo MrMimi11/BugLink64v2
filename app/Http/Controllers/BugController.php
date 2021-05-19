@@ -136,6 +136,11 @@ class BugController extends Controller
             ->paginate(0);
         //dd($bugs);
 
+        foreach ($game->bugs as $bug)
+        {
+            $bug->video= str_replace('watch?v=', 'embed/', $bug->video);
+        }
+
         return view('pages.games.bugs.resultsearch', compact('game'))->with('bugs', $bugs);
     }
 }

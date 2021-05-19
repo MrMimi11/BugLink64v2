@@ -6,30 +6,29 @@
     <h3 class="text-center mt-5">News</h3>
     <div class="d-flex justify-content-around mt-4">
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Card image cap">
+            <img class="card-img-top" src="..." alt="">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="btn btn-primary">Allez voir</a>
+                <h5 class="card-title">Coming soon</h5>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary">See this</a>
             </div>
         </div>
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Card image cap">
+            <img class="card-img-top" src="..." alt="">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="btn btn-primary">Allez voir</a>
+                <h5 class="card-title">Coming soon</h5>
+                <p class="card-text">
+
+                </p>
+                <a href="#" class="btn btn-primary">See this</a>
             </div>
         </div>
         <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Card image cap">
+            <img class="card-img-top" src="..." alt="">
             <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                    card's content.</p>
-                <a href="#" class="btn btn-primary">Allez voir</a>
+                <h5 class="card-title">Coming soon</h5>
+                <p class="card-text"></p>
+                <a href="#" class="btn btn-primary">See this</a>
             </div>
         </div>
     </div>

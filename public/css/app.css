@@ -10,6 +10,9 @@ div.network {
     text-decoration: underline;
 }
 
+li.logonav{
+    margin-left: 5em;
+}
 
 @media only screen and (max-width: 640px) {
     .contentbug {

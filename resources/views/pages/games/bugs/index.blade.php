@@ -92,7 +92,7 @@
             <div class="d-flex p-3">
                 <iframe width="150" height="150" src="{{ $bug->video }}" frameborder="0"
                         allow="autoplay; encrypted-media" allowfullscreen></iframe>
-                <div class="ml-3">
+                <div class="ml-3 w-100">
                     <h4>
                        {{ $bug->title }}
                     </h4>
