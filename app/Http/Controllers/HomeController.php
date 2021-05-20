@@ -29,6 +29,11 @@ class HomeController extends Controller
     public function ocarina()
     {
         $game = Game::with('bugs')->where('slug', 'the-legend-of-zelda-ocarina-of-time')->first();
+//        foreach ($game->bugs as $bug)
+//        {
+//            $bug->video= str_replace('watch?v=', 'embed/', $bug->video);
+//        }
+//        return view('pages.games.bugs.index', compact('game'));
         return view('pages.games.show', compact('game'));
     }
 

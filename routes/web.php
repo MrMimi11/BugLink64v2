@@ -24,8 +24,8 @@ Route::get('', [HomeController::class, 'index'])->name('home.index');
 
 Route::get('contact', [ContactController::class, 'create'])->name('contact.create');
 Route::get('login', [LoginController::class, 'create'])->name('login.create');
-Route::get('oot', [HomeController::class, 'ocarina'])->name('ocarina');
-Route::get('mm', [HomeController::class, 'majora'])->name('majora');
+Route::get('ocarina-of-time', [HomeController::class, 'ocarina'])->name('ocarina');
+Route::get('majora-s-mask', [HomeController::class, 'majora'])->name('majora');
 Route::get('games', [GameController::class, 'index'])->name('games.index');
 Route::get('{game:slug}', [GameController::class, 'show'])->name('games.show');
 Route::get('{game:slug}/edit', [GameController::class, 'edit'])->name('games.edit');
