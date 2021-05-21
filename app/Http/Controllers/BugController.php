@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\BugRequest;
 use App\Models\Bug;
+use App\Models\Category;
 use App\Models\Game;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -19,13 +20,13 @@ class BugController extends Controller
      */
     public function index(Game $game)
     {
-        $game->load('bugs');
-        //dd($game);
-        foreach ($game->bugs as $bug)
-        {
-            $bug->video= str_replace('watch?v=', 'embed/', $bug->video);
+        $game->load('categories.bugs');
+        $bugs = $game->categories()->where('categories.name', 'all')->first()->bugs()->get();
+        if (request()->query('category')) {
+            $cat = $game->categories()->where('slug', request()->query('category'))->first();
+            $bugs = $cat->bugs()->where('game_id', $game->id)->get();
         }
-        return view('pages.games.bugs.index', compact('game'));
+        return view('pages.games.bugs.index', compact('game', 'bugs'));
     }
 
     /**

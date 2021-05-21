@@ -28,12 +28,10 @@ class HomeController extends Controller
      */
     public function ocarina()
     {
-        $game = Game::with('bugs')->where('slug', 'the-legend-of-zelda-ocarina-of-time')->first();
-//        foreach ($game->bugs as $bug)
-//        {
-//            $bug->video= str_replace('watch?v=', 'embed/', $bug->video);
-//        }
-//        return view('pages.games.bugs.index', compact('game'));
+        $game = Game::with('bugs', 'categories')->where('slug', 'ocarina-of-time')->first();
+        $game->categories->each(function($Category) {
+            debug($Category->name);
+        });
         return view('pages.games.show', compact('game'));
     }
 
@@ -42,7 +40,10 @@ class HomeController extends Controller
      */
     public function majora()
     {
-        $game = Game::with('bugs')->where('slug', 'the-legend-of-zelda-majoras-mask')->first();
+        $game = Game::with('bugs', 'categories')->where('slug', 'majora-s-mask')->first();
+        $game->categories->each(function($Category) {
+            debug($Category->name);
+        });
         return view('pages.games.show', compact('game'));
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateGamesTable extends Migration
+class CreateBugCategoryTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,9 @@ class CreateGamesTable extends Migration
      */
     public function up()
     {
-        Schema::create('games', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('slug');
-            $table->string('image')->nullable();
-            $table->longText('description');
-            $table->timestamps();
+        Schema::create('bug_category', function (Blueprint $table) {
+            $table->foreignId('bug_id')->constrained();
+            $table->foreignId('category_id')->constrained();
         });
     }
 
@@ -30,6 +26,6 @@ class CreateGamesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('games');
+        Schema::dropIfExists('bug_category');
     }
 }

@@ -30,7 +30,7 @@
         <div class="chosecategories">
             <label for="categories">Select a categorie(s)</label>
         </div>
-        <div class="row d-flex justify-content-around">
+        <div class="row d-flex justify-content-around flex-column ml-1">
             <div class="form-check">
                 <input type="checkbox" class="form-check-input" id="any" title="Any%">
                 <label class="form-check-label" for="any">Any%</label>

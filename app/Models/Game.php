@@ -22,4 +22,9 @@ class Game extends Model
     {
         return $this->hasMany(Speedrun::class);
     }
+
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class);
+    }
 }

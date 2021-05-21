@@ -12,4 +12,14 @@ class Bug extends Model
     protected $fillable = [
       'title', 'slug', 'description', 'video', 'game_id'
     ];
+
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class);
+    }
+
+    public function game()
+    {
+        return $this->BelongsTo(Game::class);
+    }
 }

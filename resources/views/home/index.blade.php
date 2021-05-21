@@ -63,10 +63,10 @@
 
     <div class="imagejeux d-flex justify-content-around">
         <div><img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC9_-IAXhJ67bTz_BGagLv4rynn5pFakS4l1I0DekbELkXSrANqmk8QpKU9CgM65I9aAo&usqp=CAU"
+                src=""
                 alt="image ocarina of time"></div>
         <div><img
-                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC9_-IAXhJ67bTz_BGagLv4rynn5pFakS4l1I0DekbELkXSrANqmk8QpKU9CgM65I9aAo&usqp=CAU"
+                src=""
                 alt="image ocarina of time"></div>
     </div>
 
@@ -77,7 +77,7 @@
 
         <div class="row d-flex flex-nowrap justify-content-center network">
             Network:
-                <img src="{{ asset('images/Discord-Logo-Color.svg') }}" alt="logo discord">
+                <a href="https://discord.gg/VxtKfdAaE9"><img src="{{ asset('images/Discord-Logo+Wordmark-Color.svg') }}" alt="logo discord" class="w-50 h-50"></a>
         </div>
     </div>
 
