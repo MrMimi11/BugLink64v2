@@ -115,7 +115,7 @@ class BugController extends Controller
      * @param Bug $bug
      * @return Response
      */
-    public function destroy(Game $game, Bug $bug) //variable du model
+    public function destroy(Game $game, Bug $bug) //model variable
     {
         $bug->delete();
         return redirect()->route('games.bugs.index', compact('game'));

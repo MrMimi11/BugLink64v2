@@ -21,7 +21,7 @@
 </head>
 <body>
 
-<nav class="navbar navbar-expand navbar-light bg-success">
+<nav class="navbar navbar-expand navbar-light navbarwebsite">
     <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav w-100 d-flex align-items-center justify-content-between">

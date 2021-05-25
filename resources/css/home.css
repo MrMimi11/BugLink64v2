@@ -1,3 +1,15 @@
+.navbarwebsite{
+    background-color: #7FDD4C;
+}
+body{
+    background-color: #F5F5DC;
+}
+
+.btn{
+    background-color: #7FDD4C;
+    color: white !important;
+}
+
 div.centre{
     font-size: 18px;
 }

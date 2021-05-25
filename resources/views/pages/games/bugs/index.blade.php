@@ -9,7 +9,7 @@
     {{--    Post a bug and search bar--}}
     <div class="row d-flex justify-content-between align-items-center mb-4">
         <div>
-            <a href="{{ route('games.bugs.create', $game->slug) }}" class="button btn btn-primary">Post a bug</a>
+            <a href="{{ route('games.bugs.create', $game->slug) }}" class="button btn">Post a bug</a>
         </div>
         <div>
             @include('pages.games.bugs.search')
@@ -32,7 +32,7 @@
 
     {{--    List of bug--}}
     @foreach($bugs as $bug)
-        <div class="border w-100 mb-3">
+        <div class="border border-dark w-100 mb-3">
             <div class="d-flex p-3">
                 <iframe width="150" height="150" src="{{true ? '' : str_replace('watch?v=', 'embed/', $bug->video) }}" frameborder="0"
                         allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -49,13 +49,13 @@
                 </div>
                 <div class="col-2 d-flex justify-content-end flex-column">
                     <a href="{{ route('games.bugs.edit', [$game->slug, $bug->slug]) }}" class="text-white">
-                        <button type="button" class="btn btn-info mb-3 w-100">Edit</button>
+                        <button type="button" class="btn mb-3 w-100">Edit</button>
                     </a>
                     <a href="{{ route('games.bugs.delete', [$game->slug, $bug->slug]) }}" class="text-white">
-                        <button type="button" class="btn btn-info mb-3 w-100">Delete</button>
+                        <button type="button" class="btn mb-3 w-100">Delete</button>
                     </a>
                     <a href="{{ route('games.bugs.show', [$game->slug, $bug->slug]) }}" class="text-white">
-                        <button type="button" class="btn btn-info w-100">See this bug</button>
+                        <button type="button" class="btn w-100">See this bug</button>
                     </a>
                 </div>
             </div>

@@ -10,7 +10,7 @@
             <div class="card-body">
                 <h5 class="card-title">Coming soon</h5>
                 <p class="card-text"></p>
-                <a href="#" class="btn btn-primary">See this</a>
+                <a href="#" class="btn">See this</a>
             </div>
         </div>
         <div class="card" style="width: 18rem;">
@@ -20,7 +20,7 @@
                 <p class="card-text">
 
                 </p>
-                <a href="#" class="btn btn-primary">See this</a>
+                <a href="#" class="btn">See this</a>
             </div>
         </div>
         <div class="card" style="width: 18rem;">
@@ -28,7 +28,7 @@
             <div class="card-body">
                 <h5 class="card-title">Coming soon</h5>
                 <p class="card-text"></p>
-                <a href="#" class="btn btn-primary">See this</a>
+                <a href="#" class="btn">See this</a>
             </div>
         </div>
     </div>
