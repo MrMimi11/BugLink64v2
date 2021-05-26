@@ -24,7 +24,10 @@ class BugController extends Controller
         $bugs = $game->categories()->where('categories.name', 'all')->first()->bugs()->get();
         if (request()->query('category')) {
             $cat = $game->categories()->where('slug', request()->query('category'))->first();
-            $bugs = $cat->bugs()->where('game_id', $game->id)->get();
+            if ($cat != null)
+            {
+                $bugs = $cat->bugs()->where('game_id', $game->id)->get();
+            }
         }
         return view('pages.games.bugs.index', compact('game', 'bugs'));
     }
@@ -32,31 +35,37 @@ class BugController extends Controller
     /**
      * Show the form for creating a new resource.
      *
+     * @param Game $game
+     * @param Bug $bug
+     * @param Category $categories
      * @return Response
      */
     public function create(Game $game, Bug $bug)
     {
-        return view('pages.games.bugs.create', compact('game', 'bug'));
+        $categories = Category::all();
+        return view('pages.games.bugs.create', compact('game', 'bug', 'categories'));
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param PostRequest $postRequest
-     * @param Request $request
+     * @param BugRequest $request
+     * @param Game $game
+     * @param Bug $bugs
      * @return void
      */
-    public function store(BugRequest $request, Game $game)
+    public function store(BugRequest $request, Game $game, Bug $bugs)
     {
-        // comme ici
+        $categories = $request->input("categories");
         $title = $request->input('title');
-        Bug::create([
+        $newBug = Bug::create([
             'title' => $title,
             'slug' => Str::slug($title),
             'game_id' => $game->id,
             'description'=> $request->input('description'),
             'video'=> $request->input('video'),
         ]);
+        $newBug->categories()->sync($categories);
         return redirect()->route('games.bugs.index', $game->slug);
     }
 
@@ -117,6 +126,7 @@ class BugController extends Controller
      */
     public function destroy(Game $game, Bug $bug) //model variable
     {
+        $bug->categories()->detach();
         $bug->delete();
         return redirect()->route('games.bugs.index', compact('game'));
     }

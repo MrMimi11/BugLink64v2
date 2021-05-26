@@ -28,8 +28,10 @@
                 <li class="">
                     <a class="nav-link active" aria-current="page" href="#">A propos</a>
                 </li>
-                <li class="d-flex justify-content-center logonav">
-                    <img class="nav-link active w-25 h-25" aria-current="page" src="{{ asset('logo/logo_site_transparent.png') }}">
+                <li>
+                    <a href="{{ route('home.index') }}" class="d-flex justify-content-center logonav">
+                        <img class="nav-link active w-25 h-25" aria-current="page" src="{{ asset('logo/logo_site_transparent.png') }}">
+                    </a>
                 </li>
                 <li class="">
                     <a class="nav-link active" aria-current="page" href="{{ route('login.create') }}">Se connecter/s'inscrire</a>

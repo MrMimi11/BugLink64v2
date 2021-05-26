@@ -27,7 +27,7 @@ class BugRequest extends FormRequest
             'title' => 'required|string',
             'description' => 'required|string',
             'video' => 'required|string',
-            'checkbox' => 'required',
+            'categories' => 'required|array',
         ];
     }
 }
