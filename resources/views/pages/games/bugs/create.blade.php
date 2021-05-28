@@ -39,12 +39,16 @@
                     <input type="checkbox" class="form-check-input" id="{{ $category->id }}" title="{{ $category->name }}" value="{{ $category->id }}" name="categories[]">
                     <label class="form-check-label" for="{{ $category->id }}">{{ $category->name }}</label>
                 </div>
-                @endforeach
+            @endforeach
             @error('checkbox')
             <span class="text-danger text-sm">{{ $message }}</span>
             @enderror
         </div>
 
-        <button class="btn float-right mt-4" type="submit">Envoyer</button>
+        <div class="d-flex justify-content-end message_validation">
+            New bugs will be visible after validation by the administrator
+        </div>
+
+        <button class="btn float-right mt-3" type="submit">Send</button>
     </form>
 @endsection

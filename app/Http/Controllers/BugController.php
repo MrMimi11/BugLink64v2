@@ -40,7 +40,7 @@ class BugController extends Controller
      * @param Category $categories
      * @return Response
      */
-    public function create(Game $game, Bug $bug)
+    public function create(Game $game, Bug $bug, Category $categories)
     {
         $categories = Category::all();
         return view('pages.games.bugs.create', compact('game', 'bug', 'categories'));
@@ -79,20 +79,21 @@ class BugController extends Controller
     public function show(Game $game, Bug $bug)
     {
         $game->load('bugs');
-        $bug->video= str_replace('watch?v=', 'embed/', $bug->video);
         return view('pages.games.bugs.show', compact('game', 'bug'));
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param Bug $bug
      * @param Game $game
+     * @param Bug $bug
+     * @param Category $categories
      * @return Response
      */
-    public function edit(Game $game, Bug $bug)
+    public function edit(Game $game, Bug $bug, Category $categories)
     {
-        return view('pages.games.bugs.edit', compact('game', 'bug'));
+        $categories = Category::all();
+        return view('pages.games.bugs.edit', compact('game', 'bug', 'categories'));
     }
 
     /**
@@ -146,12 +147,6 @@ class BugController extends Controller
             ->orWhere('description', 'like', "%$q%")
             ->paginate(0);
         //dd($bugs);
-
-        foreach ($game->bugs as $bug)
-        {
-            $bug->video= str_replace('watch?v=', 'embed/', $bug->video);
-        }
-
         return view('pages.games.bugs.resultsearch', compact('game'))->with('bugs', $bugs);
     }
 }

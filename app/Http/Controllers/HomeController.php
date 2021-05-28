@@ -2,14 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Bug;
 use App\Models\Game;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    public function index()
+    public function index(Game $game)
     {
-        return view('home.index');
+        return view('home.index', compact('game'));
     }
 
     /**
@@ -20,30 +21,48 @@ class HomeController extends Controller
      */
     public function show(Home $home)
     {
-        return view('home.show', compact('home'));
+        return view('home.show', compact('home', 'game'));
     }
 
     /**
      * @return array
      */
-    public function ocarina()
+    public function ocarina(Game $game, Bug $bug)
     {
         $game = Game::with('bugs', 'categories')->where('slug', 'ocarina-of-time')->first();
         $game->categories->each(function($Category) {
             debug($Category->name);
         });
-        return view('pages.games.show', compact('game'));
+        $game->load('categories.bugs');
+        $bugs = $game->categories()->where('categories.name', 'all')->first()->bugs()->get();
+        if (request()->query('category')) {
+            $cat = $game->categories()->where('slug', request()->query('category'))->first();
+            if ($cat != null)
+            {
+                $bugs = $cat->bugs()->where('game_id', $game->id)->get();
+            }
+        }
+        return view('pages.games.bugs.index', compact('game', 'bugs', 'bug'));
     }
 
     /**
      * @return array
      */
-    public function majora()
+    public function majora(Game $game, Bug $bug)
     {
         $game = Game::with('bugs', 'categories')->where('slug', 'majora-s-mask')->first();
         $game->categories->each(function($Category) {
             debug($Category->name);
         });
-        return view('pages.games.show', compact('game'));
+        $game->load('categories.bugs');
+        $bugs = $game->categories()->where('categories.name', 'all')->first()->bugs()->get();
+        if (request()->query('category')) {
+            $cat = $game->categories()->where('slug', request()->query('category'))->first();
+            if ($cat != null)
+            {
+                $bugs = $cat->bugs()->where('game_id', $game->id)->get();
+            }
+        }
+        return view('pages.games.bugs.index', compact('game', 'bugs', 'bug'));
     }
 }
