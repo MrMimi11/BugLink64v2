@@ -33,17 +33,16 @@
         </div>
     </div>
 
-    <!-- texte au centre pour le speedrun et bug -->
+    <!-- text center on home page-->
     <div class="centre">
-        <p class="text-center mt-4">Nouveau dans le speedrun?</p>
-        <p class="text-center">Les infos pour se lancer dans le speedrun, c'est ici!
-            Le Speedrun c'est facile ! Même si vous n'en avez jamais fait vous pouvez venir découvrir, progresser,
-            et
-            peut-être que plus tard vous serez un*e pro en glitch et en speedrun et que vous obtiendrez un record du
-            monde.
-            Si vous avez d'autres questions vous pouvez rejoindre le salon discord ou demander de l'aide aux membres de
-            la communauté.
-            Amusez-vous bien !
+        <p class="text-center mt-4">New in the discovery of bugs?</p>
+        <p class="text-center">The info to get into the bugs is here!
+            Bugs can be very useful to pass some stages of the game, some manipulations
+            are enough to discover that one can walk above the void or even cross the walls...
+            You know a bug that doesn’t exist here? Create an account and share it!
+            If you have any further questions you can join the discord room or ask for help from members of
+            the community.
+            Have a good time!
         </p>
     </div>
 
@@ -57,22 +56,22 @@
 {{--                <a style="color: red;" href="{{ route('games.destroy', $game->slug) }}">Delete</a>--}}
 {{--            </li>--}}
 {{--        @endforeach--}}
-        <div class="linkgame"> <a href="{{ route('ocarina') }}">The Legend of Zelda: ocarina of time</a></div>
+        <div class="linkgame"> <a href="{{ route('ocarina') }}">The Legend of Zelda: Ocarina Of Time</a></div>
         <div class="linkgame"> <a href="{{ route('majora') }}">The Legend of Zelda: Majora's Mask</a></div>
     </div>
 
-    <div class="imagejeux d-flex justify-content-around">
+    <div class="imagejeux d-flex justify-content-around mt-2">
         <div><img
-                src=""
-                alt="image ocarina of time"></div>
+                src="{{ asset('images/The_Legend_of_Zelda_Ocarina_of_Time_Logo.png') }}"
+                alt="image ocarina of time" ></div>
         <div><img
-                src=""
+                src="{{ asset('images/The_Legend_of_Zelda_Majora\'s_Mask_Logo.png') }}"
                 alt="image ocarina of time"></div>
     </div>
 
     <div class="d-flex justify-content-between mt-5">
         <div class="contact">
-            <p>Besoin d'aide? Vous pouvez me contacter <a href="{{ route('contact.create') }}">ici</a></p>
+            <p>Need help? You can contact me here <a href="{{ route('contact.create') }}">ici</a></p>
         </div>
 
         <div class="row d-flex flex-nowrap justify-content-center network">

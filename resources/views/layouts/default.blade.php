@@ -26,7 +26,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav w-100 d-flex align-items-center justify-content-between">
                 <li class="">
-                    <a class="nav-link active" aria-current="page" href="#">A propos</a>
+                    <a class="nav-link active" aria-current="page" href="#">About</a>
                 </li>
                 <li>
                     <a href="{{ route('home.index') }}" class="d-flex justify-content-center logonav">
@@ -34,7 +34,7 @@
                     </a>
                 </li>
                 <li class="">
-                    <a class="nav-link active" aria-current="page" href="{{ route('login.create') }}">Se connecter/s'inscrire</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('login.create') }}">Sign in/Create account</a>
                 </li>
             </ul>
         </div>
