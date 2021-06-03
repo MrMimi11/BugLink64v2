@@ -22,8 +22,11 @@ use App\Http\Controllers\ContactController;
 
 Route::get('', [HomeController::class, 'index'])->name('home.index');
 
+Route::post('connection', [LoginController::class, 'login'])->name('connection');
+Route::get('connection', [LoginController::class, 'index'])->middleware('guest')->name('connection.index');
+Route::get('logout', [LoginController::class, 'logout'])->middleware('auth')->name('logout.index');
+
 Route::get('contact', [ContactController::class, 'create'])->name('contact.create');
-Route::get('login', [LoginController::class, 'create'])->name('login.create');
 Route::get('ocarina-of-time', [HomeController::class, 'ocarina'])->name('ocarina');
 Route::get('majora-s-mask', [HomeController::class, 'majora'])->name('majora');
 Route::get('games', [GameController::class, 'index'])->name('games.index');

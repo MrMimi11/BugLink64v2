@@ -17,7 +17,7 @@
             integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
             crossorigin="anonymous"></script>
     <title>BugLink64</title>
-        <link type="text/css" rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link type="text/css" rel="stylesheet" href="{{ asset('css/app.css') }}">
 </head>
 <body>
 
@@ -30,11 +30,13 @@
                 </li>
                 <li>
                     <a href="{{ route('home.index') }}" class="d-flex justify-content-center logonav">
-                        <img class="nav-link active w-25 h-25" aria-current="page" src="{{ asset('logo/logo_site_transparent.png') }}">
+                        <img class="nav-link active {{-- w-25 h-25--}}" aria-current="page"
+                            src="{{ asset('logo/logo_site_transparent.png') }}">
                     </a>
                 </li>
                 <li class="">
-                    <a class="nav-link active" aria-current="page" href="{{ route('login.create') }}">Sign in/Create account</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('connection.index') }}">Sign in/Create
+                        account</a>
                 </li>
             </ul>
         </div>

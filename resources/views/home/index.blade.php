@@ -4,8 +4,8 @@
 
     <!-- news -->
     <h3 class="text-center mt-5">News</h3>
-    <div class="d-flex justify-content-around mt-4">
-        <div class="card" style="width: 18rem;">
+    <div class="d-flex justify-content-around mt-4 news">
+        <div class="card cardnews" style="width: 18rem;">
             <img class="card-img-top" src="..." alt="">
             <div class="card-body">
                 <h5 class="card-title">Coming soon</h5>
@@ -13,7 +13,7 @@
                 <a href="#" class="btn">See this</a>
             </div>
         </div>
-        <div class="card" style="width: 18rem;">
+        <div class="card cardnews" style="width: 18rem;">
             <img class="card-img-top" src="..." alt="">
             <div class="card-body">
                 <h5 class="card-title">Coming soon</h5>
@@ -48,7 +48,7 @@
 
     <!-- choice ocarina of time and majora's mask -->
 
-    <div class="titrejeux d-flex justify-content-around mt-5">
+    <div class="titlegame d-flex justify-content-around mt-5">
 {{--        @foreach($games as $game)--}}
 {{--            <li>--}}
 {{--                <a href="{{ route('games.show', $game->slug) }}">{{ $game->name }}</a>--}}
@@ -60,23 +60,23 @@
         <div class="linkgame"> <a href="{{ route('majora') }}">The Legend of Zelda: Majora's Mask</a></div>
     </div>
 
-    <div class="imagejeux d-flex justify-content-around mt-2">
+    <div class="imagegame d-flex justify-content-around mt-2">
         <div><img
                 src="{{ asset('images/The_Legend_of_Zelda_Ocarina_of_Time_Logo.png') }}"
-                alt="image ocarina of time" ></div>
+                alt="image ocarina of time" class="imageocarina"></div>
         <div><img
                 src="{{ asset('images/The_Legend_of_Zelda_Majora\'s_Mask_Logo.png') }}"
-                alt="image ocarina of time"></div>
+                alt="image ocarina of time" class="imagemajora"></div>
     </div>
 
-    <div class="d-flex justify-content-between mt-5">
+    <div class="d-flex justify-content-between mt-5 footer">
         <div class="contact">
             <p>Need help? You can contact me here <a href="{{ route('contact.create') }}">ici</a></p>
         </div>
 
         <div class="row d-flex flex-nowrap justify-content-center network">
             Network:
-                <a href="https://discord.gg/VxtKfdAaE9"><img src="{{ asset('images/Discord-Logo+Wordmark-Color.svg') }}" alt="logo discord" class="w-50 h-50"></a>
+                <a href="https://discord.gg/VxtKfdAaE9"><img src="{{ asset('images/Discord-Logo+Wordmark-Color.svg') }}" alt="Discord" class="w-50 h-50"></a>
         </div>
     </div>
 
