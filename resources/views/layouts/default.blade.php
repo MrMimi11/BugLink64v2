@@ -30,13 +30,13 @@
                 </li>
                 <li>
                     <a href="{{ route('home.index') }}" class="d-flex justify-content-center logonav">
-                        <img class="nav-link active {{-- w-25 h-25--}}" aria-current="page"
+                        <img class="nav-link active" aria-current="page"
                             src="{{ asset('logo/logo_site_transparent.png') }}">
                     </a>
                 </li>
-                <li class="">
-                    <a class="nav-link active" aria-current="page" href="{{ route('connection.index') }}">Sign in/Create
-                        account</a>
+                <li class="d-flex">
+                    <a class="nav-link active" aria-current="page" href="{{ route('registration.index') }}">Sign in</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('connection.index') }}">Create account</a>
                 </li>
             </ul>
         </div>

@@ -1,8 +1,15 @@
 @extends('layouts.default')
 @section('content')
     <h2 class="text-center">S'inscrire</h2>
-    <form action="{{ route('connection') }}" method="post">
+    <form action="{{ route('registration.store') }}" method="post">
         @csrf
+        <div class="form-group">
+            <label for="pseudo">Pseudo</label>
+            <input type="text" class="form-control" id="pseudo" placeholder="Pseudo" name="pseudo">
+        </div>
+        @error('pseudo')
+        <span class="text-danger text-sm">{{ $message }}</span>
+        @enderror
         <div class="form-group">
             <label for="email">Email</label>
             <input type="email" class="form-control" id="email" placeholder="Email" name="email">
@@ -17,9 +24,8 @@
         @error('password')
         <span class="text-danger text-sm">{{ $message }}</span>
         @enderror
-        @include('flash.flash')
         <div>
-            <button class="btn float-right" type="submit">Se connecter</button>
+            <button class="btn float-right" type="submit">S'inscrire</button>
         </div>
     </form>
 @endsection

@@ -30,7 +30,7 @@ class LoginController extends Controller
                 return redirect()->route('home.index');
             } else {
                 //Sinon redirection vers la page index
-                return redirect()->route('connection.index')->with('error', 'email et/ou mot de passe incorrectes');
+                return redirect()->route('connection.index')->with('error', 'email et/ou mot de passe incorrects');
             }
         }
         return redirect()->route('connection.index')->with('error', 'Aucun utilisateur n\'a été trouvé'); //si c'est null

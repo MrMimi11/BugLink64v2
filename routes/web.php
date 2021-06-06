@@ -4,7 +4,7 @@ use App\Http\Controllers\BugController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\PostController;
+use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\SpeedrunController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
@@ -21,6 +21,10 @@ use App\Http\Controllers\ContactController;
 */
 
 Route::get('', [HomeController::class, 'index'])->name('home.index');
+
+Route::get('registration', [RegistrationController::class, 'index'])->name('registration.index');
+Route::post('', [RegistrationController::class, 'store'])->name('registration.store');
+
 
 Route::post('connection', [LoginController::class, 'login'])->name('connection');
 Route::get('connection', [LoginController::class, 'index'])->middleware('guest')->name('connection.index');
