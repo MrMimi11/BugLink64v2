@@ -33,18 +33,18 @@ Route::get('logout', [LoginController::class, 'logout'])->middleware('auth')->na
 Route::get('contact', [ContactController::class, 'create'])->name('contact.create');
 Route::get('ocarina-of-time', [HomeController::class, 'ocarina'])->name('ocarina');
 Route::get('majora-s-mask', [HomeController::class, 'majora'])->name('majora');
-Route::get('games', [GameController::class, 'index'])->name('games.index');
-Route::get('{game:slug}', [GameController::class, 'show'])->name('games.show');
-Route::get('{game:slug}/edit', [GameController::class, 'edit'])->name('games.edit');
-Route::get('{game:slug}/destroy', [GameController::class, 'destroy'])->name('games.destroy');
 
 Route::get('{game:slug}/bugs', [BugController::class, 'index'])->name('games.bugs.index');
-Route::get('{game:slug}/bugs/create', [BugController::class, 'create'])->name('games.bugs.create');
 Route::post('{game:slug}/bugs', [BugController::class, 'store'])->name('games.bugs.store');
+Route::get('{game:slug}/bugs/create', [BugController::class, 'create'])->name('games.bugs.create');
 Route::get('{game:slug}/bugs/search', [BugController::class, 'search'])->name('games.bugs.search');
 Route::post('{game:slug}/bugs/{bug:slug}', [BugController::class, 'update'])->name('games.bugs.update');
 Route::get('{game:slug}/bugs/{bug:slug}', [BugController::class, 'show'])->name('games.bugs.show');
 Route::get('{game:slug}/bugs/{bug:slug}/edit', [BugController::class, 'edit'])->name('games.bugs.edit');
 Route::get('{game:slug}/bugs/{bug:slug}/delete', [BugController::class, 'destroy'])->name('games.bugs.delete');
 
+//Route::get('games', [GameController::class, 'index'])->name('games.index');
+//Route::get('{game:slug}', [GameController::class, 'show'])->name('games.show');
+//Route::get('{game:slug}/edit', [GameController::class, 'edit'])->name('games.edit');
+//Route::get('{game:slug}/destroy', [GameController::class, 'destroy'])->name('games.destroy');
 Route::get('{game:slug}/speedruns', [SpeedrunController::class, 'index'])->name('games.speedruns.index');
