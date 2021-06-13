@@ -4,33 +4,31 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBugsTable extends Migration
+class CreateCommentsTable extends Migration
 {
     /**
      * Run the migrations.
-     * Ajouter des éléments
+     *
      * @return void
      */
     public function up()
     {
-        Schema::create('bugs', function (Blueprint $table) {
+        Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->string('slug');
-            $table->longText('description');
-            $table->string('video');
-            $table->tinyInteger('verification');
+            $table->integer('reponse_to');
+            $table->integer('position');
+            $table->text('description');
             $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
-     * Drop(supprime) des éléments
+     *
      * @return void
      */
     public function down()
     {
-        Schema::dropIfExists('bugs');
+        Schema::dropIfExists('comments');
     }
 }

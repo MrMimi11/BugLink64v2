@@ -19,6 +19,15 @@ class CreateBugCategoryTable extends Migration
         });
     }
 
+//create table if not exists bug_cateogry(
+//bug_id int not null,
+//category_id int not null
+//) ENGINE=InnoDB;
+//
+//alter table bug_category
+//add contrains bug_category_bug_id foreign key bug_id reference bugs (id)
+//add contrains bug_category_category_id forein key category_id refence categories (id);
+
     /**
      * Reverse the migrations.
      *
