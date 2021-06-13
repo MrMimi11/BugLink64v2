@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\RegistrationRequest;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
@@ -52,15 +53,14 @@ class RegistrationController extends Controller
      * @param Request $request
      * @return void
      */
-    public function store(Request $request)
+    public function store(RegistrationRequest $registrationRequest)
     {
-        $request->validate([
-            'pseudo' => 'required',
-            'email' => 'required',
-            'password' => 'required',//Hash::make($data['password']),//Hash::make($request->password),
+        $inputs = $registrationRequest->validated([]);
+        User::create([
+            'pseudo' => $inputs['pseudo'],
+            'email' => $inputs['email'],
+            'password' => Hash::make($inputs['password'])
         ]);
-
-        User::create($request->all());
         return redirect()->route('home.index');
     }
 }

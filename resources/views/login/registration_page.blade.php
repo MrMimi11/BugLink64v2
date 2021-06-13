@@ -24,6 +24,13 @@
         @error('password')
         <span class="text-danger text-sm">{{ $message }}</span>
         @enderror
+        <div class="form-group">
+            <label for="password_confirmation">Confirm Password</label>
+            <input type="password" class="form-control" id="password_confirmation" placeholder="Confirm Password" name="password_confirmation">
+        </div>
+        @error('confirmpassword')
+        <span class="text-danger text-sm">{{ $message }}</span>
+        @enderror
         <div>
             <button class="btn float-right" type="submit">S'inscrire</button>
         </div>

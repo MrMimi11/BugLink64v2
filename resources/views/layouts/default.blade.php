@@ -35,8 +35,8 @@
                     </a>
                 </li>
                 <li class="d-flex">
-                    <a class="nav-link active" aria-current="page" href="{{ route('registration.index') }}">Sign in</a>
-                    <a class="nav-link active" aria-current="page" href="{{ route('connection.index') }}">Create account</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('registration.index') }}">Create account</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('connection.index') }}">Sign in</a>
                 </li>
             </ul>
         </div>
