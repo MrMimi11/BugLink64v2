@@ -27,7 +27,8 @@ class BugFactory extends Factory
             'title' => $title,
             'slug' => Str::slug($title),
             'description' => $this->faker->paragraph(3),
-            'video' => 'https://www.youtube.com/watch?v=dQw4w9WgXcQ'
+            'video' => 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+            'verification' => 0
         ];
     }
 }

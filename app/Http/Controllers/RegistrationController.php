@@ -18,34 +18,9 @@ class RegistrationController extends Controller
      */
     public function index()
     {
+        //retourne la vue, c'est à dire la page pour se créer un compte
         return view('login.registration_page');
     }
-
-//    protected function validator(array $data)
-//    {
-//        return Validator::make($data, [
-//            'pseudo' => ['required', 'string', 'max:255'],
-//            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-//            'password' => ['required', 'string', 'min:8', 'confirmed'],
-//        ]);
-//    }
-//
-//    /**
-//     * Create a new user instance after a valid registration.
-//     *
-//     * @param  array  $data
-//     * @return \App\User
-//     */
-//    protected function store(array $data, Request $request)
-//    {
-//        $data = User::create($request->all());
-//        return User::create([
-//            'pseudo' => $data['pseudo'],
-//            'email' => $data['email'],
-//            'password' => Hash::make($data['password']),
-//        ]);
-//    }
-
 
     /**
      * Store a newly created resource in storage.
@@ -55,12 +30,22 @@ class RegistrationController extends Controller
      */
     public function store(RegistrationRequest $registrationRequest)
     {
+        //création variable inputs où on va lui dire que ce qu'il y a dans le RegistrationRequest doit être valide donc valider la requête
         $inputs = $registrationRequest->validated([]);
+        //on va créer un User à partir du model
         User::create([
+            //la colonne 'pseudo' va prendre en compte la variable inputs qu'on a défini dessus et on va lui dire de valider le nom du input qui est pseudo
+            //(name = 'pseudo' dans le input)
             'pseudo' => $inputs['pseudo'],
+            //la colonne 'email' va prendre en compte la variable inputs qu'on a défini dessus et on va lui dire de valider le nom du input qui est pseudo
+            //(name = 'email' dans le input)
             'email' => $inputs['email'],
+            //la colonne 'password' va prendre en compte un model Hash:make qui servira à hasher le mot de passe dans la base de données lors
+            // de l'envoie du formulaire car on a pas le droit de le stocker en clair la variable inputs qu'on a défini dessus
+            // et on va lui dire de valider le nom du input qui est pseudo (name = 'password' dans le input)
             'password' => Hash::make($inputs['password'])
         ]);
+        //redirection sur la vue home.index qui est la page d'accueil une fois qu'on s'est inscrit
         return redirect()->route('home.index');
     }
 }

@@ -36,7 +36,7 @@
     @foreach($bugs as $bug)
         <div class="border border-dark w-100 mb-3">
             <div class="d-flex p-3">
-                <iframe width="150" height="150" src="{{true ? '' : str_replace('watch?v=', 'embed/', $bug->video) }}" frameborder="0"
+                <iframe width="150" height="150" src="{{str_replace('watch?v=', 'embed/', $bug->video) }}" frameborder="0"
                         allow="autoplay; encrypted-media" allowfullscreen></iframe>
                 <div class="ml-3 w-100">
                     <h4>
