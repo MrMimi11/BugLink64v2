@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0210e47d-3f36-4ff4-ba5c-b12f6794e8f7" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/BugController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/BugController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RegistrationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RegistrationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Requests/RegistrationRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/RegistrationRequest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Bug.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Bug.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/BugFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/BugFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_03_090540_create_bugs_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_03_090540_create_bugs_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_05_21_093614_create_bug_category_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_05_21_093614_create_bug_category_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/GameSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/GameSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/login/registration_page.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/login/registration_page.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/pages/games/bugs/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/games/bugs/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/UserSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/pages/games/bugs/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/pages/games/bugs/index.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -42,73 +41,136 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="buglinksite_laravel@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="buglinksite_laravel@localhost [2]" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="buglinksite_laravel@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="buglinksite_laravel@localhost [2]" type="feb32156:DbDataSourceImpl" />
         <item name="buglinksite_laravel: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="buglinksite_laravel@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="buglinksite_laravel@localhost [2]" type="feb32156:DbDataSourceImpl" />
         <item name="buglinksite_laravel: schema" type="76f4a085:MysqlImplModel$Schema" />
-        <item name="bugs: table" type="285a2a93:MysqlImplModel$Table" />
+        <item name="category_game: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="buglinksite_laravel@localhost [2]" type="feb32156:DbDataSourceImpl" />
+        <item name="buglinksite_laravel: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="users: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/login/registration_page.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="711">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="das://aa9d2c6f-13ae-4ceb-b89a-7134d6ebb0e2/schema/buglinksite_laravel/table/users">
-          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-            <state projectRestartId="31800f71-25ab-446a-9b35-5216d58f2661">
-              <filtering>
-                <filter text="" />
-              </filtering>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Models/Bug.php">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/requetes.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="13" column="49" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+            <state relative-caret-position="-36">
+              <caret line="78" column="65" selection-start-line="78" selection-start-column="65" selection-end-line="78" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="uml://DATABASE/64f71b81-774e-4006-a33a-56ea5ff6a81c.SCHEMA:buglinksite_laravel">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>DATABASE</ID>
+              <OriginalElement>64f71b81-774e-4006-a33a-56ea5ff6a81c.SCHEMA:buglinksite_laravel</OriginalElement>
+              <nodes>
+                <node x="390.0" y="627.0">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.namesplatform</node>
+                <node x="0.0" y="510.0">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.category_game</node>
+                <node x="0.0" y="855.0">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.password_resets</node>
+                <node x="307.5" y="255.0">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.speedruns</node>
+                <node x="134.50000000000003" y="277.0">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.categories</node>
+                <node x="192.0" y="627.0">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.comments</node>
+                <node x="322.5" y="0.0">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.games</node>
+                <node x="588.0" y="627.0">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.migrations</node>
+                <node x="0.0" y="627.0">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.failed_jobs</node>
+                <node x="337.1071428571429" y="510.0">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.bug_category</node>
+                <node x="738.5" y="0.0">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.users</node>
+                <node x="510.5" y="233.0">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.bugs</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.category_game" target="64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.categories">
+                  <point x="50.25" y="-36.0" />
+                  <point x="150.75" y="485.0" />
+                  <point x="172.75000000000003" y="485.0" />
+                  <point x="-38.25" y="69.5" />
+                </edge>
+                <edge source="64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.category_game" target="64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.games">
+                  <point x="-50.25" y="-36.0" />
+                  <point x="50.25" y="485.0" />
+                  <point x="85.14285714285717" y="485.0" />
+                  <point x="85.14285714285717" y="208.0" />
+                  <point x="348.0" y="208.0" />
+                  <point x="-51.0" y="91.5" />
+                </edge>
+                <edge source="64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.speedruns" target="64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.games">
+                  <point x="0.0" y="-91.5" />
+                  <point x="0.0" y="91.5" />
+                </edge>
+                <edge source="64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.bugs" target="64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.games">
+                  <point x="0.0" y="-113.5" />
+                  <point x="602.0" y="208.0" />
+                  <point x="450.0" y="208.0" />
+                  <point x="51.0" y="91.5" />
+                </edge>
+                <edge source="64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.bug_category" target="64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.categories">
+                  <point x="-50.25" y="-36.0" />
+                  <point x="387.3571428571429" y="485.0" />
+                  <point x="249.25000000000003" y="485.0" />
+                  <point x="38.25" y="69.5" />
+                </edge>
+                <edge source="64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.bug_category" target="64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.bugs">
+                  <point x="50.25" y="-36.0" />
+                  <point x="487.8571428571429" y="485.0" />
+                  <point x="602.0" y="485.0" />
+                  <point x="0.0" y="113.5" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.7873065015479876" x="-33.285160110956326" y="360.0510551841656" />
+              <SelectedNodes>
+                <node>64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.namesplatform</node>
+              </SelectedNodes>
+              <Categories>
+                <Category>Key columns</Category>
+                <Category>Columns</Category>
+              </Categories>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BugController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-696">
+              <caret line="76" column="42" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
               <folding>
-                <element signature="e#30#84#0#PHP" expanded="true" />
+                <element signature="e#40#73#0#PHP" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/pages/games/bugs/create.blade.php">
+        <entry file="file://$PROJECT_DIR$/database/factories/GameFactory.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="562">
-              <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+            <state relative-caret-position="581">
+              <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/database/seeders/GameSeeder.php">
+        <entry file="file://$PROJECT_DIR$/database/factories/BugFactory.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="533">
-              <caret line="32" column="189" selection-start-line="32" selection-start-column="189" selection-end-line="32" selection-end-column="189" />
-              <folding>
-                <element signature="e#36#76#0#PHP" expanded="true" />
-              </folding>
+            <state relative-caret-position="604">
+              <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -130,8 +192,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/views/pages/games/speedruns/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/post/postbug.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/games/show.blade.php" />
         <option value="$PROJECT_DIR$/database/factories/GameFactory.php" />
         <option value="$PROJECT_DIR$/resources/css/bug.css" />
@@ -164,23 +224,25 @@
         <option value="$PROJECT_DIR$/database/factories/UserFactory.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/layouts/default.blade.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2021_05_21_093614_create_bug_category_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_06_13_184719_create_comments_table.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2021_05_03_090540_create_bugs_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2021_06_13_184813_create_namesplatform_table.php" />
         <option value="$PROJECT_DIR$/database/factories/BugFactory.php" />
         <option value="$PROJECT_DIR$/app/Models/User.php" />
         <option value="$PROJECT_DIR$/app/Http/Kernel.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/BugController.php" />
-        <option value="$PROJECT_DIR$/resources/views/pages/games/bugs/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/RegistrationRequest.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/RegistrationController.php" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/.datagrid/cell" />
-        <option value="$PROJECT_DIR$/database/seeders/GameSeeder.php" />
         <option value="$PROJECT_DIR$/resources/views/login/registration_page.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/pages/games/bugs/create.blade.php" />
         <option value="$PROJECT_DIR$/app/Models/Bug.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/pages/games/bugs/index.blade.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2021_05_21_093614_create_bug_category_table.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2021_05_03_090540_create_bugs_table.php" />
+        <option value="$PROJECT_DIR$/database/seeders/UserSeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeders/GameSeeder.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/requetes.sql" />
       </list>
     </option>
   </component>
@@ -297,10 +359,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="528" />
-    <option name="y" value="49" />
-    <option name="width" value="1315" />
-    <option name="height" value="1036" />
+    <option name="x" value="-7" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -581,7 +642,11 @@
       <workItem from="1623612879971" duration="901000" />
       <workItem from="1623615817863" duration="293000" />
       <workItem from="1623622202468" duration="1127000" />
-      <workItem from="1623654601193" duration="32028000" />
+      <workItem from="1623654601193" duration="32708000" />
+      <workItem from="1623743392918" duration="270000" />
+      <workItem from="1623744700392" duration="7383000" />
+      <workItem from="1623796696694" duration="3048000" />
+      <workItem from="1623829125493" duration="12645000" />
     </task>
     <task id="LOCAL-00001" summary="Create route, controller and view for home page">
       <created>1619512613225</created>
@@ -594,12 +659,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="417428000" />
+    <option name="totallyTimeSpent" value="441454000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9062159" visible="true" weight="0.28944564" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.9062159" visible="true" weight="0.13219616" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" sideWeight="0.09378408" side_tool="true" weight="0.22921109" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -615,11 +680,11 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3391494" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Database Console" order="12" visible="true" weight="0.16248637" />
+      <window_info active="true" anchor="bottom" id="Database Console" order="12" visible="true" weight="0.05997819" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="Database" order="3" visible="true" weight="0.21695095" />
+      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.15191898" />
     </layout>
     <layout-to-restore>
       <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.9062159" visible="true" weight="0.17910448" />
@@ -656,125 +721,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="Create route, controller and view for home page" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Database/Eloquent/Concerns/GuardsAttributes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="13" column="14" selection-start-line="13" selection-start-column="14" selection-end-line="13" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/ContactRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Middleware/Authenticate.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="25" column="70" selection-start-line="25" selection-start-column="70" selection-end-line="25" selection-end-column="70" />
-          <folding>
-            <element signature="e#7#46#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/games/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="12" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/LoginRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/LoginController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225">
-          <caret line="11" selection-start-line="11" selection-end-line="14" />
-          <folding>
-            <element signature="e#40#68#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="uml://DATABASE/aa9d2c6f-13ae-4ceb-b89a-7134d6ebb0e2.SCHEMA:buglinksite_laravel">
-      <provider selected="true" editor-type-id="UmlEditorProvider">
-        <state>
-          <ID>DATABASE</ID>
-          <OriginalElement>aa9d2c6f-13ae-4ceb-b89a-7134d6ebb0e2.SCHEMA:buglinksite_laravel</OriginalElement>
-          <nodes>
-            <node x="" y="">aa9d2c6f-13ae-4ceb-b89a-7134d6ebb0e2.TABLE:buglinksite_laravel.failed_jobs</node>
-            <node x="" y="">aa9d2c6f-13ae-4ceb-b89a-7134d6ebb0e2.TABLE:buglinksite_laravel.speedruns</node>
-            <node x="" y="">aa9d2c6f-13ae-4ceb-b89a-7134d6ebb0e2.TABLE:buglinksite_laravel.category_game</node>
-            <node x="" y="">aa9d2c6f-13ae-4ceb-b89a-7134d6ebb0e2.TABLE:buglinksite_laravel.migrations</node>
-            <node x="" y="">aa9d2c6f-13ae-4ceb-b89a-7134d6ebb0e2.TABLE:buglinksite_laravel.password_resets</node>
-            <node x="" y="">aa9d2c6f-13ae-4ceb-b89a-7134d6ebb0e2.TABLE:buglinksite_laravel.users</node>
-            <node x="" y="">aa9d2c6f-13ae-4ceb-b89a-7134d6ebb0e2.TABLE:buglinksite_laravel.games</node>
-            <node x="" y="">aa9d2c6f-13ae-4ceb-b89a-7134d6ebb0e2.TABLE:buglinksite_laravel.categories</node>
-            <node x="" y="">aa9d2c6f-13ae-4ceb-b89a-7134d6ebb0e2.TABLE:buglinksite_laravel.bug_category</node>
-            <node x="" y="">aa9d2c6f-13ae-4ceb-b89a-7134d6ebb0e2.TABLE:buglinksite_laravel.bugs</node>
-          </nodes>
-          <notes />
-          <edges />
-          <settings layout="Hierarchic Group" zoom="0.8602409638554217" x="391.0" y="395.0" />
-          <SelectedNodes />
-          <Categories>
-            <Category>Key columns</Category>
-            <Category>Columns</Category>
-          </Categories>
-          <SCOPE>All</SCOPE>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="36" selection-start-line="36" selection-end-line="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_100000_create_password_resets_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_03_090555_create_speedruns_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/UserFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
-          <folding>
-            <element signature="e#38#58#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -789,26 +739,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="21" column="36" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-          <folding>
-            <element signature="e#7#52#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_03_090540_create_bugs_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="21" column="32" lean-forward="true" selection-start-line="21" selection-start-column="32" selection-end-line="21" selection-end-column="32" />
-          <folding>
-            <element signature="e#7#52#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -828,20 +758,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_06_13_184719_create_comments_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeders/UserSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://aa9d2c6f-13ae-4ceb-b89a-7134d6ebb0e2/schema/buglinksite_laravel/table/bugs">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state projectRestartId="7068a635-368b-41e2-a300-9df76ebb2c72">
@@ -858,13 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/BugFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/layouts/default.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
@@ -872,27 +781,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_21_093614_create_bug_category_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
-          <folding>
-            <element signature="e#7#52#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CategoryController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="156">
           <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/CategoryFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -962,13 +854,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/pages/games/bugs/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="35" column="27" lean-forward="true" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Foundation/Http/FormRequest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="296">
@@ -976,37 +861,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BugController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="86" selection-start-line="86" selection-end-line="87" selection-end-column="50" />
-          <folding>
-            <element signature="e#40#73#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/Hash.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="12" column="6" selection-start-line="12" selection-start-column="6" selection-end-line="12" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/RegistrationController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1023">
-          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
-          <folding>
-            <element signature="e#40#82#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Requests/RegistrationRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="6" column="6" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
@@ -1026,26 +884,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/factories/GameFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="28" column="48" lean-forward="true" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeders/GameSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="32" column="189" selection-start-line="32" selection-start-column="189" selection-end-line="32" selection-end-column="189" />
-          <folding>
-            <element signature="e#36#76#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="das://aa9d2c6f-13ae-4ceb-b89a-7134d6ebb0e2/schema/buglinksite_laravel/table/users">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state projectRestartId="31800f71-25ab-446a-9b35-5216d58f2661">
+        <state projectRestartId="2058f429-24fe-4ad8-b0e7-067ff9a9afd5">
           <filtering>
             <filter text="" />
           </filtering>
@@ -1059,20 +900,303 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Requests/RegistrationRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/pages/games/bugs/create.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="562">
+        <state relative-caret-position="815">
           <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/64f71b81-774e-4006-a33a-56ea5ff6a81c/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="uml://DATABASE/64f71b81-774e-4006-a33a-56ea5ff6a81c.SCHEMA:test">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>64f71b81-774e-4006-a33a-56ea5ff6a81c.SCHEMA:test</OriginalElement>
+          <nodes>
+            <node x="" y="">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:test.categories</node>
+            <node x="" y="">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:test.bugs</node>
+            <node x="" y="">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:test.games</node>
+            <node x="" y="">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:test.bug_category</node>
+            <node x="" y="">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:test.users</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="0.8602150537634409" x="765.0" y="492.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/CategoryFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://64f71b81-774e-4006-a33a-56ea5ff6a81c/schema/test/table/bug_category">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="4257dc66-5cbe-478a-aa3a-bb3bb539d808">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_06_13_184719_create_comments_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="19" column="25" lean-forward="true" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://64f71b81-774e-4006-a33a-56ea5ff6a81c/schema/buglinksite_laravel/table/games">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="4257dc66-5cbe-478a-aa3a-bb3bb539d808">
+          <filtering>
+            <filter text="" />
+          </filtering>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Models/Bug.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
+        <state relative-caret-position="312">
           <caret line="13" column="49" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
           <folding>
             <element signature="e#30#84#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeders/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/pages/games/bugs/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1248">
+          <caret line="48" column="85" selection-start-line="48" selection-start-column="85" selection-end-line="48" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="62" />
+          <folding>
+            <element signature="e#7#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_21_093614_create_bug_category_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="e#7#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2021_05_03_090540_create_bugs_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="21" column="60" selection-start-line="21" selection-start-column="60" selection-end-line="21" selection-end-column="60" />
+          <folding>
+            <element signature="e#7#52#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://64f71b81-774e-4006-a33a-56ea5ff6a81c/schema/buglinksite_laravel/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="ae63d1bf-a0ca-4f14-93ad-1d78777f19aa">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://64f71b81-774e-4006-a33a-56ea5ff6a81c/schema/buglinksite_laravel/table/categories">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="ae63d1bf-a0ca-4f14-93ad-1d78777f19aa">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://64f71b81-774e-4006-a33a-56ea5ff6a81c/schema/buglinksite_laravel/table/bugs">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="ae63d1bf-a0ca-4f14-93ad-1d78777f19aa">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/BugFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="604">
+          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/UserFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-179">
+          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+          <folding>
+            <element signature="e#38#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeders/GameSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="67" column="9" selection-start-line="67" selection-start-column="9" selection-end-line="67" selection-end-column="9" />
+          <folding>
+            <element signature="e#36#76#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/RegistrationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-286">
+          <caret line="11" column="6" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
+          <folding>
+            <element signature="e#40#82#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeders/UserSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/factories/GameFactory.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="581">
+          <caret line="28" column="48" selection-start-line="28" selection-start-column="48" selection-end-line="28" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/BugController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-696">
+          <caret line="76" column="42" selection-start-line="76" selection-start-column="42" selection-end-line="76" selection-end-column="42" />
+          <folding>
+            <element signature="e#40#73#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="uml://DATABASE/64f71b81-774e-4006-a33a-56ea5ff6a81c.SCHEMA:buglinksite_laravel">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DATABASE</ID>
+          <OriginalElement>64f71b81-774e-4006-a33a-56ea5ff6a81c.SCHEMA:buglinksite_laravel</OriginalElement>
+          <nodes>
+            <node x="390.0" y="627.0">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.namesplatform</node>
+            <node x="0.0" y="510.0">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.category_game</node>
+            <node x="0.0" y="855.0">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.password_resets</node>
+            <node x="307.5" y="255.0">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.speedruns</node>
+            <node x="134.50000000000003" y="277.0">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.categories</node>
+            <node x="192.0" y="627.0">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.comments</node>
+            <node x="322.5" y="0.0">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.games</node>
+            <node x="588.0" y="627.0">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.migrations</node>
+            <node x="0.0" y="627.0">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.failed_jobs</node>
+            <node x="337.1071428571429" y="510.0">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.bug_category</node>
+            <node x="738.5" y="0.0">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.users</node>
+            <node x="510.5" y="233.0">64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.bugs</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.category_game" target="64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.categories">
+              <point x="50.25" y="-36.0" />
+              <point x="150.75" y="485.0" />
+              <point x="172.75000000000003" y="485.0" />
+              <point x="-38.25" y="69.5" />
+            </edge>
+            <edge source="64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.category_game" target="64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.games">
+              <point x="-50.25" y="-36.0" />
+              <point x="50.25" y="485.0" />
+              <point x="85.14285714285717" y="485.0" />
+              <point x="85.14285714285717" y="208.0" />
+              <point x="348.0" y="208.0" />
+              <point x="-51.0" y="91.5" />
+            </edge>
+            <edge source="64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.speedruns" target="64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.games">
+              <point x="0.0" y="-91.5" />
+              <point x="0.0" y="91.5" />
+            </edge>
+            <edge source="64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.bugs" target="64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.games">
+              <point x="0.0" y="-113.5" />
+              <point x="602.0" y="208.0" />
+              <point x="450.0" y="208.0" />
+              <point x="51.0" y="91.5" />
+            </edge>
+            <edge source="64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.bug_category" target="64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.categories">
+              <point x="-50.25" y="-36.0" />
+              <point x="387.3571428571429" y="485.0" />
+              <point x="249.25000000000003" y="485.0" />
+              <point x="38.25" y="69.5" />
+            </edge>
+            <edge source="64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.bug_category" target="64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.bugs">
+              <point x="50.25" y="-36.0" />
+              <point x="487.8571428571429" y="485.0" />
+              <point x="602.0" y="485.0" />
+              <point x="0.0" y="113.5" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.7873065015479876" x="-33.285160110956326" y="360.0510551841656" />
+          <SelectedNodes>
+            <node>64f71b81-774e-4006-a33a-56ea5ff6a81c.TABLE:buglinksite_laravel.namesplatform</node>
+          </SelectedNodes>
+          <Categories>
+            <Category>Key columns</Category>
+            <Category>Columns</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://64f71b81-774e-4006-a33a-56ea5ff6a81c/schema/buglinksite_laravel/table/bug_category">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="ae63d1bf-a0ca-4f14-93ad-1d78777f19aa">
+          <filtering>
+            <filter text="" />
+          </filtering>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/requetes.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-36">
+          <caret line="78" column="65" selection-start-line="78" selection-start-column="65" selection-end-line="78" selection-end-column="65" />
         </state>
       </provider>
     </entry>

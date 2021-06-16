@@ -61,7 +61,7 @@ class GameSeeder extends Seeder
             ]);
             $created->games()->sync($category);
             $created->bugs()
-                ->createMany(Bug::factory(5)
+                ->createMany(Bug::factory(0)
                     ->make([
                         'game_id' => Game::all()->random()->id,
                     ])->toArray());

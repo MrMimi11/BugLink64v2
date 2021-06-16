@@ -19,7 +19,7 @@ class CreateBugsTable extends Migration
             $table->string('slug');
             $table->longText('description');
             $table->string('video');
-            $table->tinyInteger('verification');
+            $table->tinyInteger('verification')->nullable();
             $table->timestamps();
         });
     }

@@ -53,6 +53,7 @@
                     <a href="{{ route('games.bugs.edit', [$game->slug, $bug->slug]) }}" class="text-white">
                         <button type="button" class="btn mb-3 w-100">Edit</button>
                     </a>
+{{--                    route défini dans web.php pour supprimer le bug et ça doit prendre en compte l'url du jeu est l'url du bug--}}
                     <a href="{{ route('games.bugs.delete', [$game->slug, $bug->slug]) }}" class="text-white">
                         <button type="button" class="btn mb-3 w-100">Delete</button>
                     </a>

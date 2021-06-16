@@ -24,14 +24,6 @@ class CreateUsersTable extends Migration
         });
     }
 
-//CREATE TABLE utilisateurs(
-//id_utilisateur Int  Auto_increment  NOT NULL ,
-//pseudo         Varchar (255) NOT NULL ,
-//email          Varchar (255) NOT NULL ,
-//motdepasse     Varchar (255) NOT NULL
-//,CONSTRAINT utilisateurs_PK PRIMARY KEY (id_utilisateur)
-//)ENGINE=InnoDB;
-
     /**
      * Reverse the migrations.
      *
