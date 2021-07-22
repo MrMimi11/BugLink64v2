@@ -13,11 +13,10 @@ class AddForeignToGames extends Migration
      */
     public function up()
     {
-        Schema::table('bugs', function (Blueprint $table) {
+        Schema::table('bugs', function (Blueprint $table)
+        {
             $table->foreignId('game_id')->constrained();
-        });
-        Schema::table('speedruns', function (Blueprint $table) {
-            $table->foreignId('game_id')->constrained();
+            $table->foreignId('user_id')->constrained();
         });
     }
 
