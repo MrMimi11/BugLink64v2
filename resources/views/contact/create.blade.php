@@ -1,27 +1,35 @@
 @extends('layouts.default')
 @section('content')
-    <h2 class="text-center">Me contacter</h2>
-    <form action="#" method="post" enctype="multipart/form-data">
+@include('flash.flash')
+    <h2 class="text-center">Contact me</h2>
+    <form action="{{ route('contact.store') }}" method="post">
         @csrf
         <div class="form-group">
             <label for="pseudo">Pseudo</label>
-            <input type="text" class="form-control" id="pseudo">
+            <input type="text" name="nickname" class="form-control" id="pseudo">
         </div>
-        @error('pseudo')
+        @error('nickname')
+        <span class="text-danger text-sm">{{ $message }}</span>
+        @enderror
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" class="form-control" id="email">
+        </div>
+        @error('email')
         <span class="text-danger text-sm">{{ $message }}</span>
         @enderror
         <div class="form-group">
             <label for="title">Objet</label>
-            <input type="text" class="form-control" id="title">
+            <input type="text" name="object" class="form-control" id="title">
         </div>
-        @error('title')
+        @error('object')
         <span class="text-danger text-sm">{{ $message }}</span>
         @enderror
         <div class="form-group">
             <label for="description">Description</label>
-            <textarea name="description" class="form-control" id="description" rows="7"></textarea>
+            <textarea name="content" class="form-control" id="description" rows="7"></textarea>
         </div>
-        @error('description')
+        @error('content')
         <span class="text-danger text-sm">{{ $message }}</span>
         @enderror
         <br>

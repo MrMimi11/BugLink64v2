@@ -24,20 +24,23 @@ class BugController extends Controller
         $game->load('categories.bugs');
         //création variable bugs et assigner à bugs les catégories de jeu où il va prendre tous les noms de catégories en commençant par la 1ère
         // et ensuite récupérer les bugs
-        $bugs = $game->categories()->where('categories.name', 'all')->first()->bugs()->get();
+        $bugs = $game->categories()
+            ->where('categories.name', 'all')
+            ->first()
+            ->bugs()
+            ->get();
         //si la requête est égale à la catégorie
-        if (request()->query('category'))
-        {
+        if (request()->query('category')) {
             //assigner à cat, le jeu avec les catégories qu'il a, et on va voir la colonne slug pour faire une requête au niveau de la catégorie
             // création variable cat et on va prendre la 1ère = quand on clique sur la catégorie, le slug change avec le query ?category=any
             $cat = $game->categories()->where('slug', request()->query('category'))->first();
             //si la catégorie est différent de null (=rien)
-            if ($cat != null)
-            {
-                //créer une variable bugs et on va assigner la variable bugs en lui disant que le bug appartient à cette catégorie dans le jeu
-                // en vérifiant le games id (1 = oot 2= mm)
-                $bugs = $cat->bugs()->where('game_id', $game->id)->get();
+            if (!$cat) {
+                return view('pages.games.bugs.index', compact('game', 'bugs'))->with('error', 'Cette catégorie n\'existe pas');
             }
+            //créer une variable bugs et on va assigner la variable bugs en lui disant que le bug appartient à cette catégorie dans le jeu
+            // en vérifiant le games id (1 = oot 2= mm)
+            $bugs = $cat->bugs()->where('game_id', $game->id)->get();
         }
         //on lui retourne la vue avec les variables game et bugs pour savoir quel jeu et quel bug
         return view('pages.games.bugs.index', compact('game', 'bugs'));

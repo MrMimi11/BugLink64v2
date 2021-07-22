@@ -31,6 +31,7 @@ Route::get('connection', [LoginController::class, 'index'])->middleware('guest')
 Route::get('logout', [LoginController::class, 'logout'])->middleware('auth')->name('logout.index');
 
 Route::get('contact', [ContactController::class, 'create'])->name('contact.create');
+Route::post('contact', [ContactController::class, 'store'])->name('contact.store');
 Route::get('ocarina-of-time', [HomeController::class, 'ocarina'])->name('ocarina');
 Route::get('majora-s-mask', [HomeController::class, 'majora'])->name('majora');
 
