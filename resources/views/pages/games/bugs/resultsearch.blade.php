@@ -8,9 +8,11 @@
 
     {{--    Post a bug and search bar--}}
     <div class="row d-flex justify-content-between align-items-center mb-4">
-        <div>
-            <a href="{{ route('games.bugs.create', $game->slug) }}" class="button btn btn-primary">Post a bug</a>
-        </div>
+        @auth()
+            <div>
+                <a href="{{ route('games.bugs.create', $game->slug) }}" class="button btn">Post a bug</a>
+            </div>
+        @endauth
         <div>
             @include('pages.games.bugs.search')
         </div>
