@@ -1,0 +1,31 @@
+.allbutton{
+    flex-direction: column;
+    justify-content: end;
+}
+
+@media only screen and (max-width: 375px) {
+    .bugcontentborder {
+        flex-direction: column;
+    }
+    .bugofvideo{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1em;
+    }
+    .allbutton{
+        flex-direction: initial;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .bugcontentborder {
+        flex-direction: column;
+    }
+    .bugofvideo{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1em;
+    }
+    .allbutton{
+        flex-direction: initial;
+    }
+}

@@ -31,7 +31,6 @@
         @error('video')
         <span class="text-danger text-sm">{{ $message }}</span>
         @enderror
-        <br>
 
         {{--        Select categories--}}
         <div class="chosecategories">

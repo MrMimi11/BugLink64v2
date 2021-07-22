@@ -71,7 +71,7 @@
 
     <div class="d-flex justify-content-between mt-5 footer">
         <div class="contact">
-            <p>Need help? You can contact me here <a href="{{ route('contact.create') }}">ici</a></p>
+            <p>Need help? You can contact me <a href="{{ route('contact.create') }}">here</a></p>
         </div>
 
         <div class="row d-flex flex-nowrap justify-content-center network">

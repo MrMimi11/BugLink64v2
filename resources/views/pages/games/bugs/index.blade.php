@@ -35,9 +35,9 @@
     {{--    List of bug--}}
     @foreach($bugs as $bug)
         <div class="border border-dark w-100 mb-3">
-            <div class="d-flex p-3">
+            <div class="bugcontentborder d-flex p-3">
                 <iframe width="150" height="150" src="{{str_replace('watch?v=', 'embed/', $bug->video) }}" frameborder="0"
-                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                        allow="autoplay; encrypted-media" allowfullscreen class="bugofvideo"></iframe>
                 <div class="ml-3 w-100">
                     <h4>
                         {{ $bug->title }} | {{ $bug->game->name }}
@@ -49,7 +49,7 @@
                         {{  \Illuminate\Support\Str::limit($bug->description, 200) }}
                     </div>
                 </div>
-                <div class="col-2 d-flex justify-content-end flex-column">
+                <div class="col-2 d-flex allbutton">
                     <a href="{{ route('games.bugs.edit', [$game->slug, $bug->slug]) }}" class="text-white">
                         <button type="button" class="btn mb-3 w-100">Edit</button>
                     </a>

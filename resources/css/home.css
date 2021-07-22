@@ -82,4 +82,7 @@ div.network {
         height: 15vh;
         width: 25vh;
     }
+    .network{
+        margin-left: 1px;
+    }
 }

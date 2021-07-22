@@ -47,6 +47,6 @@
             @enderror
         </div>
 
-        <button class="btn float-right mt-4" type="submit">Envoyer</button>
+        <button class="btn float-right mt-4" type="submit">Send</button>
     </form>
 @endsection
