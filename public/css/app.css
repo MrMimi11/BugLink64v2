@@ -82,6 +82,9 @@ div.network {
         height: 15vh;
         width: 25vh;
     }
+    .network{
+        margin-left: 1px;
+    }
 }
 
 @media only screen and (max-width: 640px) {
@@ -123,6 +126,38 @@ div.network {
 .message_validation{
     text-decoration: underline;
     font-size: 16px;
+}
+
+.allbutton{
+    flex-direction: column;
+    justify-content: end;
+}
+
+@media only screen and (max-width: 375px) {
+    .bugcontentborder {
+        flex-direction: column;
+    }
+    .bugofvideo{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1em;
+    }
+    .allbutton{
+        flex-direction: initial;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .bugcontentborder {
+        flex-direction: column;
+    }
+    .bugofvideo{
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1em;
+    }
+    .allbutton{
+        flex-direction: initial;
+    }
 }
 
 
