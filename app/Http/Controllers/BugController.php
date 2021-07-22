@@ -48,10 +48,9 @@ class BugController extends Controller
      *
      * @param Game $game
      * @param Bug $bug
-     * @param Category $categories
      * @return Response
      */
-    public function create(Game $game, Bug $bug, Category $categories)
+    public function create(Game $game, Bug $bug)
     {
         //on va récupérer toutes les relations du model catégory (donc games et bugs)
         $categories = Category::all();
