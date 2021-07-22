@@ -47,15 +47,16 @@
                         {{  \Illuminate\Support\Str::limit($bug->description, 200) }}
                     </div>
                 </div>
-                <div class="col-2 d-flex justify-content-end flex-column">
+                <div class="col-2 d-flex allbutton">
                     <a href="{{ route('games.bugs.edit', [$game->slug, $bug->slug]) }}" class="text-white">
-                        <button type="button" class="btn btn-info mb-3 w-100">Edit</button>
+                        <button type="button" class="btn mb-3 w-100">Edit</button>
                     </a>
+                    {{--                    route défini dans web.php pour supprimer le bug et ça doit prendre en compte l'url du jeu est l'url du bug--}}
                     <a href="{{ route('games.bugs.delete', [$game->slug, $bug->slug]) }}" class="text-white">
-                        <button type="button" class="btn btn-info mb-3 w-100">Delete</button>
+                        <button type="button" class="btn mb-3 w-100">Delete</button>
                     </a>
                     <a href="{{ route('games.bugs.show', [$game->slug, $bug->slug]) }}" class="text-white">
-                        <button type="button" class="btn btn-info w-100">See this bug</button>
+                        <button type="button" class="btn w-100">See this bug</button>
                     </a>
                 </div>
             </div>
