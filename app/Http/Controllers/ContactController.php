@@ -29,15 +29,15 @@ class ContactController extends Controller
         Http::post(config('discord.contact.webhookUrl'), [
             'embeds' => [
                 [
-                    'title' => 'Titre: ' . $request->input('object'),
-                    'description' => 'Contenu: ' . $request->input('content'),
+                    'title' => 'Title: ' . $request->input('object'),
+                    'description' => 'Content: ' . $request->input('content'),
                     'color' => '1030145',
                     'author' => [
-                        'name' => 'Auteur: ' . $request->input('nickname') . ' - ' . $request->input('email')
+                        'name' => 'Autor: ' . $request->input('nickname') . ' - ' . $request->input('email')
                     ]
                 ]
             ]
         ]);
-        return redirect()->route('contact.create')->with('success', 'votre demande a été envoyé');
+        return redirect()->route('contact.create')->with('success', 'your request has been sent');
     }
 }
