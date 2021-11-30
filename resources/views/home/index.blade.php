@@ -56,8 +56,8 @@
 {{--                <a style="color: red;" href="{{ route('games.destroy', $game->slug) }}">Delete</a>--}}
 {{--            </li>--}}
 {{--        @endforeach--}}
-        <div class="linkgame"> <a href="{{ route('ocarina') }}">The Legend of Zelda: Ocarina Of Time</a></div>
-        <div class="linkgame"> <a href="{{ route('majora') }}">The Legend of Zelda: Majora's Mask</a></div>
+        <div class="linkgame"> <a href="{{ route('games.bugs.index', \App\Models\Game::where('slug', 'ocarina-of-time')->first()) }}">The Legend of Zelda: Ocarina Of Time</a></div>
+        <div class="linkgame"> <a href="{{ route('games.bugs.index', \App\Models\Game::where('slug', 'majora-s-mask')->first()) }}">The Legend of Zelda: Majora's Mask</a></div>
     </div>
 
     <div class="imagegame d-flex justify-content-around mt-2">

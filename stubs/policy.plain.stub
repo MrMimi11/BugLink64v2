@@ -1,0 +1,22 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Auth\Access\HandlesAuthorization;
+use {{ namespacedUserModel }};
+
+/**
+ * @see Policy https://laravel.com/docs/8.x/authorization#creating-policies
+ */
+class {{ class }}
+{
+    use HandlesAuthorization;
+
+    /**
+     * @return void
+     */
+    public function __construct()
+    {
+        //
+    }
+}

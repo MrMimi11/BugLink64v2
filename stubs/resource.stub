@@ -1,0 +1,23 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Http\Resources\Json\JsonResource;
+use Illuminate\Http\Request;
+use Illuminate\Contracts\Support\Arrayable;
+use JsonSerializable;
+
+/**
+ * @see Resource https://laravel.com/docs/8.x/eloquent-resources
+ */
+class {{ class }} extends JsonResource
+{
+    /**
+     * @param Request $request
+     * @return array|Arrayable|JsonSerializable
+     */
+    public function toArray($request): array|Arrayable|JsonSerializable
+    {
+        return parent::toArray($request);
+    }
+}

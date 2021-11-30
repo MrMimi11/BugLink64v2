@@ -21,14 +21,10 @@ class BugController extends Controller
     public function index(Game $game) //Game = Model
     {
         //chargement des bugs en fonctions de la catégorie
-        $game->load('categories.bugs');
+        $game->load('categories');
         //création variable bugs et assigner à bugs les catégories de jeu où il va prendre tous les noms de catégories en commençant par la 1ère
         // et ensuite récupérer les bugs
-        $bugs = $game->categories()
-            ->where('categories.name', 'all')
-            ->first()
-            ->bugs()
-            ->get();
+        $bugs = $game->bugs()->with('categories', 'game')->active()->get();
         //si la requête est égale à la catégorie
         if (request()->query('category')) {
             //assigner à cat, le jeu avec les catégories qu'il a, et on va voir la colonne slug pour faire une requête au niveau de la catégorie
@@ -40,7 +36,7 @@ class BugController extends Controller
             }
             //créer une variable bugs et on va assigner la variable bugs en lui disant que le bug appartient à cette catégorie dans le jeu
             // en vérifiant le games id (1 = oot 2= mm)
-            $bugs = $cat->bugs()->where('game_id', $game->id)->get();
+            $bugs = $cat->bugs()->active()->where('game_id', $game->id)->get();
         }
         //on lui retourne la vue avec les variables game et bugs pour savoir quel jeu et quel bug
         return view('pages.games.bugs.index', compact('game', 'bugs'));
@@ -56,9 +52,9 @@ class BugController extends Controller
     public function create(Game $game, Bug $bug)
     {
         //on va récupérer toutes les relations du model catégory (donc games et bugs)
-        $categories = Category::all();
+        $game->load('categories');
         //on retourne la vue de la page pour créer un bug avec les 3 variables
-        return view('pages.games.bugs.create', compact('game', 'bug', 'categories'));
+        return view('pages.games.bugs.create', compact('game', 'bug'));
     }
 
     /**
@@ -86,12 +82,15 @@ class BugController extends Controller
             'slug' => Str::slug($title),
             //la colonne 'game_id" récupère le jeu avec son id auquel on poste le bug
             'game_id' => $game->id,
+            'user_id' => auth()->user()->id, // TODO: Changer pour l'utilisateur connecté
             //la colonne 'description' va faire une requête sur l'input où le nom est 'description' dans le formulaire création bug
             //(name = 'description' dans le input)
             'description'=> $request->input('description'),
             //la colonne 'video' va faire une requête sur l'input où le nom est 'video' dans le formulaire création bug
             //(name = 'video' dans le input)
             'video'=> $request->input('video'),
+
+            'validated_at' => null
         ]);
         //le nouveau bug qu'on aura poster va se synchroniser avec les catégories qu'on aura choisi dans le formulaire
         $newBug->categories()->sync($categories);

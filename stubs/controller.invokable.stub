@@ -1,0 +1,29 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ rootNamespace }}Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Illuminate\Contracts\View\View;
+
+/**
+ * @see Controller https://laravel.com/docs/8.x/controllers
+ * @see Request https://laravel.com/docs/8.x/requests
+ * @see Response https://laravel.com/docs/8.x/responses
+ * @see Storage https://laravel.com/docs/8.x/filesystem
+ * @see Eloquent https://laravel.com/docs/8.x/eloquent
+ * @see Relation https://laravel.com/docs/8.x/eloquent-relationships
+ * @see Validator https://laravel.com/docs/8.x/validation#working-with-validated-input
+ * @see Broadcast https://laravel.com/docs/8.x/broadcasting#broadcasting-events
+ */
+class {{ class }} extends Controller
+{
+    /**
+     * @param Request $request
+     * @return View
+     */
+    public function __invoke(Request $request): View
+    {
+        //
+    }
+}

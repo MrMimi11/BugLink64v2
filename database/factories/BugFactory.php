@@ -28,7 +28,7 @@ class BugFactory extends Factory
             'slug' => Str::slug($title),
             'description' => $this->faker->paragraph(3),
             'video' => 'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
-            'verification' => 0
+            'validated_at' => $this->faker->randomElement([null, now()])
         ];
     }
 }

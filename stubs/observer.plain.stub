@@ -1,0 +1,11 @@
+<?php
+
+namespace {{ namespace }};
+
+/**
+ * @see Observer https://laravel.com/docs/8.x/eloquent#observers
+ */
+class {{ class }}
+{
+    //
+}

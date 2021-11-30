@@ -1,0 +1,29 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Foundation\Bus\Dispatchable;
+
+/**
+ * @see Job https://laravel.com/docs/8.x/queues
+ */
+class {{ class }}
+{
+    use Dispatchable;
+
+    /**
+     * @return void
+     */
+    public function __construct()
+    {
+        //
+    }
+
+    /**
+     * @return void
+     */
+    public function handle(): void
+    {
+        //
+    }
+}

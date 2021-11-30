@@ -1,0 +1,66 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ rootNamespace }}Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
+
+/**
+ * @see Controller https://laravel.com/docs/8.x/controllers
+ * @see Request https://laravel.com/docs/8.x/requests
+ * @see Response https://laravel.com/docs/8.x/responses
+ * @see Resource https://laravel.com/docs/8.x/eloquent-resources
+ * @see Storage https://laravel.com/docs/8.x/filesystem
+ * @see Eloquent https://laravel.com/docs/8.x/eloquent
+ * @see Relation https://laravel.com/docs/8.x/eloquent-relationships
+ * @see Validator https://laravel.com/docs/8.x/validation#working-with-validated-input
+ * @see Broadcast https://laravel.com/docs/8.x/broadcasting#broadcasting-events
+ */
+class {{ class }} extends Controller
+{
+    /**
+     * @return JsonResponse
+     */
+    public function index(): JsonResponse
+    {
+        return response()->json();
+    }
+
+    /**
+     * @param Request $request
+     * @return JsonResponse
+     */
+    public function store(Request $request): JsonResponse
+    {
+        return response()->json();
+    }
+
+    /**
+     * @param int $id
+     * @return JsonResponse
+     */
+    public function show(int $id): JsonResponse
+    {
+        return response()->json();
+    }
+
+    /**
+     * @param Request $request
+     * @param int $id
+     * @return JsonResponse
+     */
+    public function update(Request $request, int $id): JsonResponse
+    {
+        return response()->json();
+    }
+
+    /**
+     * @param int $id
+     * @return JsonResponse
+     */
+    public function destroy(int $id): JsonResponse
+    {
+        return response()->json();
+    }
+}

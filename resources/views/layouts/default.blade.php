@@ -31,13 +31,20 @@
                 <li>
                     <a href="{{ route('home.index') }}" class="d-flex justify-content-center logonav">
                         <img class="nav-link active" aria-current="page"
-                            src="{{ asset('logo/logo_site_transparent.png') }}">
+                             src="{{ asset('logo/logo_site_transparent.png') }}">
                     </a>
                 </li>
-                <li class="d-flex">
-                    <a class="nav-link active" aria-current="page" href="{{ route('registration.index') }}">Create account</a>
-                    <a class="nav-link active" aria-current="page" href="{{ route('connection.index') }}">Sign in</a>
-                </li>
+                @auth
+                    <a class="nav-link active" aria-current="page" href="{{ route('logout.index') }}">Logout</a>
+                @endauth
+                @guest
+                    <li class="d-flex">
+                        <a class="nav-link active" aria-current="page" href="{{ route('registration.index') }}">Create
+                            account</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('connection.index') }}">Sign
+                            in</a>
+                    </li>
+                @endguest
             </ul>
         </div>
     </div>

@@ -22,12 +22,19 @@
     <div>
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
             @foreach($game->categories as $category)
-                <li class="nav-item">
-                    {{ debug(request()->query('category')) }}
-                    <a class="nav-link {{ request()->query('category') === $category->slug ? 'active' : '' }} "
-                       href="{{ route('games.bugs.index', [$game->slug, 'category=' . $category->slug]) }}"
-                       aria-selected="true">{{ $category->name }}</a>
-                </li>
+                @if($category->slug === 'all')
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->query('category') === $category->slug ? 'active' : '' }} "
+                           href="{{ route('games.bugs.index', $game->slug) }}"
+                           aria-selected="true">{{ $category->name }}</a>
+                    </li>
+                    @else
+                    <li class="nav-item">
+                        <a class="nav-link {{ request()->query('category') === $category->slug ? 'active' : '' }} "
+                           href="{{ route('games.bugs.index', [$game->slug, 'category=' . $category->slug]) }}"
+                           aria-selected="true">{{ $category->name }}</a>
+                    </li>
+                @endif
             @endforeach
         </ul>
     </div>
@@ -36,8 +43,10 @@
     @foreach($bugs as $bug)
         <div class="border border-dark w-100 mb-3">
             <div class="bugcontentborder d-flex p-3">
-                <iframe width="150" height="150" src="{{str_replace('watch?v=', 'embed/', $bug->video) }}" frameborder="0"
-                        allow="autoplay; encrypted-media" allowfullscreen class="bugofvideo"></iframe>
+                @if($bug->video)
+                    <iframe width="150" height="150" src="{{str_replace('watch?v=', 'embed/', $bug->video) }}" frameborder="0"
+                            allow="autoplay; encrypted-media" allowfullscreen class="bugofvideo"></iframe>
+                @endif
                 <div class="ml-3 w-100">
                     <h4>
                         {{ $bug->title }} | {{ $bug->game->name }}
@@ -46,7 +55,7 @@
                         @endforeach
                     </h4>
                     <div>
-                        {{  \Illuminate\Support\Str::limit($bug->description, 200) }}
+                        {{  Str::limit($bug->description, 200) }}
                     </div>
                 </div>
                 <div class="col-2 d-flex allbutton">

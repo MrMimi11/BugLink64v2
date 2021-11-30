@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\BugController as AdminBugController;
 use App\Http\Controllers\BugController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\HomeController;
@@ -22,28 +23,31 @@ use App\Http\Controllers\ContactController;
 
 Route::get('', [HomeController::class, 'index'])->name('home.index');
 
-Route::get('registration', [RegistrationController::class, 'index'])->name('registration.index');
-Route::post('', [RegistrationController::class, 'store'])->name('registration.store');
+Route::get('registration', [RegistrationController::class, 'index'])->middleware('guest')->name('registration.index');
+Route::post('registration', [RegistrationController::class, 'store'])->middleware('guest')->name('registration.store');
 
+Route::group(['middleware' => 'admin'], function () {
+    Route::get('/admin', [AdminBugController::class, 'index'])->name('admin.bugs.index');
+    Route::get('/admin/{bug:slug}', [AdminBugController::class, 'show'])->name('admin.bugs.show');
+    Route::post('/admin/{bug:slug}/update', [AdminBugController::class, 'update'])->name('admin.bugs.update');
+});
 
-Route::post('connection', [LoginController::class, 'login'])->name('connection');
+Route::post('connection', [LoginController::class, 'login'])->middleware('guest')->name('connection');
 Route::get('connection', [LoginController::class, 'index'])->middleware('guest')->name('connection.index');
 Route::get('logout', [LoginController::class, 'logout'])->middleware('auth')->name('logout.index');
 
 Route::get('contact', [ContactController::class, 'create'])->name('contact.create');
 Route::post('contact', [ContactController::class, 'store'])->name('contact.store');
-Route::get('ocarina-of-time', [HomeController::class, 'ocarina'])->name('ocarina');
-Route::get('majora-s-mask', [HomeController::class, 'majora'])->name('majora');
 
-Route::get('{game:slug}/bugs', [BugController::class, 'index'])->name('games.bugs.index');
-Route::post('{game:slug}/bugs', [BugController::class, 'store'])->name('games.bugs.store');
-Route::get('{game:slug}/bugs/create', [BugController::class, 'create'])->name('games.bugs.create');
+Route::get('{game:slug}', [BugController::class, 'index'])->name('games.bugs.index');
 Route::get('{game:slug}/bugs/search', [BugController::class, 'search'])->name('games.bugs.search');
-Route::post('{game:slug}/bugs/{bug:slug}', [BugController::class, 'update'])->name('games.bugs.update');
-Route::get('{game:slug}/bugs/{bug:slug}', [BugController::class, 'show'])->name('games.bugs.show');
-Route::get('{game:slug}/bugs/{bug:slug}/edit', [BugController::class, 'edit'])->name('games.bugs.edit');
-Route::get('{game:slug}/bugs/{bug:slug}/delete', [BugController::class, 'destroy'])->name('games.bugs.delete');
 
+Route::post('{game:slug}/bugs', [BugController::class, 'store'])->middleware('auth')->name('games.bugs.store');
+Route::get('{game:slug}/bugs/create', [BugController::class, 'create'])->middleware('auth')->name('games.bugs.create');
+Route::post('{game:slug}/bugs/{bug:slug}', [BugController::class, 'update'])->middleware('auth')->name('games.bugs.update');
+Route::get('{game:slug}/bugs/{bug:slug}', [BugController::class, 'show'])->name('games.bugs.show');
+Route::get('{game:slug}/bugs/{bug:slug}/edit', [BugController::class, 'edit'])->middleware('auth')->name('games.bugs.edit');
+Route::get('{game:slug}/bugs/{bug:slug}/delete', [BugController::class, 'destroy'])->middleware('auth')->name('games.bugs.delete');
 //Route::get('games', [GameController::class, 'index'])->name('games.index');
 //Route::get('{game:slug}', [GameController::class, 'show'])->name('games.show');
 //Route::get('{game:slug}/edit', [GameController::class, 'edit'])->name('games.edit');

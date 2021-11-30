@@ -1,0 +1,13 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Database\Eloquent\Relations\Pivot;
+
+/**
+ * @see Model https://laravel.com/docs/8.x/eloquent#generating-model-classes
+ */
+class {{ class }} extends Pivot
+{
+    //
+}

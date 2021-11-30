@@ -19,7 +19,7 @@
         <span class="text-danger text-sm">{{ $message }}</span>
         @enderror
         <div class="form-group">
-            <label for="title">Objet</label>
+            <label for="title">Object</label>
             <input type="text" name="object" class="form-control" id="title">
         </div>
         @error('object')
@@ -33,6 +33,6 @@
         <span class="text-danger text-sm">{{ $message }}</span>
         @enderror
         <br>
-        <button class="btn btn-primary float-right" type="submit">Envoyer</button>
+        <button class="btn float-right" type="submit">Send</button>
     </form>
 @endsection

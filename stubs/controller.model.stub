@@ -1,0 +1,83 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ model }};
+use {{ rootNamespace }}Http\Controllers\Controller;
+use Illuminate\Http\Request;
+use Illuminate\Contracts\View\View;
+
+/**
+ * @see Controller https://laravel.com/docs/8.x/controllers
+ * @see Request https://laravel.com/docs/8.x/requests
+ * @see Response https://laravel.com/docs/8.x/responses
+ * @see Storage https://laravel.com/docs/8.x/filesystem
+ * @see Eloquent https://laravel.com/docs/8.x/eloquent
+ * @see Relation https://laravel.com/docs/8.x/eloquent-relationships
+ * @see Validator https://laravel.com/docs/8.x/validation#working-with-validated-input
+ * @see Broadcast https://laravel.com/docs/8.x/broadcasting#broadcasting-events
+ */
+class {{ class }} extends Controller
+{
+    /**
+     * @return View
+     */
+    public function index(): View
+    {
+        return view();
+    }
+
+    /**
+     * @return View
+     */
+    public function create(): View
+    {
+        return view();
+    }
+
+    /**
+     * @param Request $request
+     * @return RedirectResponse
+     */
+    public function store(Request $request): RedirectResponse
+    {
+        return redirect()->route()->with('success', 'successful store');
+    }
+
+    /**
+     * @param {{ model }} ${{ modelVariable }}
+     * @return View
+     */
+    public function show({{ model }} ${{ modelVariable }}): View
+    {
+        return view();
+    }
+
+    /**
+     * @param {{ model }} ${{ modelVariable }}
+     * @return View
+     */
+    public function edit({{ model }} ${{ modelVariable }}): View
+    {
+        return view();
+    }
+
+    /**
+     * @param Request $request
+     * @param {{ model }} ${{ modelVariable }}
+     * @return RedirectResponse
+     */
+    public function update(Request $request, {{ model }} ${{ modelVariable }}): RedirectResponse
+    {
+        return redirect()->route()->with('success', 'successful update');
+    }
+
+    /**
+     * @param {{ model }} ${{ modelVariable }}
+     * @return RedirectResponse
+     */
+    public function destroy({{ model }} ${{ modelVariable }}): RedirectResponse
+    {
+        return redirect()->route()->with('success', 'successful removal');
+    }
+}

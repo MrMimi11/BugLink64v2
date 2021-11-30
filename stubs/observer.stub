@@ -1,0 +1,56 @@
+<?php
+
+namespace {{ namespace }};
+
+use {{ namespacedModel }};
+
+/**
+ * @see Observer https://laravel.com/docs/8.x/eloquent#observers
+ */
+class {{ class }}
+{
+    /**
+     * @param {{ model }} ${{ modelVariable }}
+     * @return void
+     */
+    public function created({{ model }} ${{ modelVariable }}): void
+    {
+        //
+    }
+
+    /**
+     * @param {{ model }} ${{ modelVariable }}
+     * @return void
+     */
+    public function updated({{ model }} ${{ modelVariable }}): void
+    {
+        //
+    }
+
+    /**
+     * @param {{ model }} ${{ modelVariable }}
+     * @return void
+     */
+    public function deleted({{ model }} ${{ modelVariable }}): void
+    {
+        //
+    }
+
+    /**
+     * @param {{ model }} ${{ modelVariable }}
+     * @return void
+     */
+    public function restored({{ model }} ${{ modelVariable }}): void
+    {
+        //
+    }
+
+    /**
+     * @param {{ model }} ${{ modelVariable }}
+     * @return void
+     */
+    public function forceDeleted({{ model }} ${{ modelVariable }}): void
+    {
+        //
+    }
+}

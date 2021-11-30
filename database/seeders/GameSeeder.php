@@ -7,6 +7,7 @@ use App\Models\Bug;
 use App\Models\Category;
 use App\Models\Game;
 use App\Models\Speedrun;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Str;
 
@@ -60,11 +61,12 @@ class GameSeeder extends Seeder
                 'slug' => Str::slug($key)
             ]);
             $created->games()->sync($category);
-            $created->bugs()
-                ->createMany(Bug::factory(0)
+/*            $created->bugs()
+                ->createMany(Bug::factory(2)
                     ->make([
                         'game_id' => Game::all()->random()->id,
-                    ])->toArray());
+                        'user_id' => User::all()->random()->id
+                    ])->toArray());*/
         }
     }
 }

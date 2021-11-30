@@ -1,0 +1,19 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+
+/**
+ * @see Seeder https://laravel.com/docs/8.x/seeding#writing-seeders
+ */
+class {{ class }} extends Seeder
+{
+    /**
+     * @return void
+     */
+    public function run(): void
+    {
+        //
+    }
+}

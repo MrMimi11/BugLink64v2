@@ -38,10 +38,10 @@
         </div>
         <div class="row d-flex justify-content-around flex-column ml-1">
 {{--            On va faire une boucle pour lister tous les noms des catégories qui se trouvent dans la base de données--}}
-            @foreach($categories as $category)
+            @foreach($game->categories as $category)
                 <div class="form-check">
                     <input type="checkbox" class="form-check-input" id="{{ $category->id }}"
-                           title="{{ $category->name }}" value="{{ $category->id }}" name="categories[]">
+                           title="{{ $category->name }}" value="{{ $category->id }}" @if($category->slug === 'all') checked disabled="disabled" @endif name="categories[]">
                     <label class="form-check-label" for="{{ $category->id }}">{{ $category->name }}</label>
                 </div>
             @endforeach

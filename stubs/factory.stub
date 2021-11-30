@@ -1,0 +1,28 @@
+<?php
+
+namespace {{ factoryNamespace }};
+
+use Illuminate\Database\Eloquent\Factories\Factory;
+use {{ namespacedModel }};
+
+/**
+ * @see Factory https://laravel.com/docs/8.x/database-testing
+ * @see Formatters https://github.com/fzaninotto/Faker#formatters
+ */
+class {{ factory }}Factory extends Factory
+{
+    /**
+     * @var string
+     */
+    protected $model = {{ model }}::class;
+
+    /**
+     * @return array
+     */
+    public function definition(): array
+    {
+        return [
+            //
+        ];
+    }
+}

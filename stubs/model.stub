@@ -1,0 +1,19 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+/**
+ * @see Model https://laravel.com/docs/8.x/eloquent#generating-model-classes
+ */
+class {{ class }} extends Model
+{
+    use HasFactory;
+
+    /**
+     * @var string[]
+     */
+    protected $fillable = [];
+}

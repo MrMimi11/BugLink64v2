@@ -1,0 +1,84 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Auth\Access\HandlesAuthorization;
+use {{ namespacedModel }};
+use {{ namespacedUserModel }};
+use Illuminate\Auth\Access\Response;
+
+/**
+ * @see Policy https://laravel.com/docs/8.x/authorization#creating-policies
+ */
+class {{ class }}
+{
+    use HandlesAuthorization;
+
+    /**
+     * @param {{ user }} $user
+     * @return Response|bool
+     */
+    public function viewAny({{ user }} $user): Response|bool
+    {
+        //
+    }
+
+    /**
+     * @param {{ user }} $user
+     * @param  {{ model }} ${{ modelVariable }}
+     * @return Response|bool
+     */
+    public function view({{ user }} $user, {{ model }} ${{ modelVariable }}): Response|bool
+    {
+        //
+    }
+
+    /**
+     * @param {{ user }} $user
+     * @return Response|bool
+     */
+    public function create({{ user }} $user): Response|bool
+    {
+        //
+    }
+
+    /**
+     * @param {{ user }} $user
+     * @param  {{ model }} ${{ modelVariable }}
+     * @return Response|bool
+     */
+    public function update({{ user }} $user, {{ model }} ${{ modelVariable }}): Response|bool
+    {
+        //
+    }
+
+    /**
+     * @param {{ user }} $user
+     * @param  {{ model }} ${{ modelVariable }}
+     * @return Response|bool
+     */
+    public function delete({{ user }} $user, {{ model }} ${{ modelVariable }}): Response|bool
+    {
+        //
+    }
+
+    /**
+     * @param {{ user }} $user
+     * @param  {{ model }} ${{ modelVariable }}
+     * @return Response|bool
+     */
+    public function restore({{ user }} $user, {{ model }} ${{ modelVariable }}): Response|bool
+    {
+        //
+    }
+
+    /**
+     * @param {{ user }} $user
+     * @param  {{ model }} ${{ modelVariable }}
+     * @return Response|bool
+     */
+    public function forceDelete({{ user }} $user, {{ model }} ${{ modelVariable }}): Response|bool
+    {
+        //
+    }
+}

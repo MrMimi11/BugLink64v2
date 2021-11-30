@@ -8,13 +8,14 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Response;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\View\View;
 
 class RegistrationController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
-     * @return Response
+     * @return View
      */
     public function index()
     {
@@ -25,15 +26,15 @@ class RegistrationController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param Request $request
+     * @param RegistrationRequest $registrationRequest
      * @return void
      */
     public function store(RegistrationRequest $registrationRequest)
     {
         //création variable inputs où on va lui dire que ce qu'il y a dans le RegistrationRequest doit être valide donc valider la requête
-        $inputs = $registrationRequest->validated([]);
+        $inputs = $registrationRequest->validated();
         //on va créer un User à partir du model
-        User::create([
+        $user = User::create([
             //la colonne 'pseudo' va prendre en compte la variable inputs qu'on a défini dessus et on va lui dire de valider le nom du input qui est pseudo
             //(name = 'pseudo' dans le input)
             'pseudo' => $inputs['pseudo'],
@@ -46,6 +47,6 @@ class RegistrationController extends Controller
             'password' => Hash::make($inputs['password'])
         ]);
         //redirection sur la vue home.index qui est la page d'accueil une fois qu'on s'est inscrit
-        return redirect()->route('home.index');
+        return redirect()->route('connection.index');
     }
 }
