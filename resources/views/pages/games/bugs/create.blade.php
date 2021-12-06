@@ -16,7 +16,7 @@
         <span class="text-danger text-sm">{{ $message }}</span>
         @enderror
         <div class="form-group">
-            <label for="description">Description</label>
+            <label for="description">Description (in english)</label>
             <textarea name="description" class="form-control" id="description" rows="7"></textarea>
         </div>
 {{--     Le @error cherche s’il y a une clé error dans la session et affiche la valeur de la clé. Si le champ « Description » est vide, cela entraîne un message d’erreur.--}}
@@ -24,7 +24,7 @@
         <span class="text-danger text-sm">{{ $message }}</span>
         @enderror
         <div class="form-group">
-            <label for="video">Video</label>
+            <label for="video">Video (only links from youtube)</label>
             <input type="text" name="video" class="form-control" id="video">
         </div>
 {{--     Le @error cherche s’il y a une clé error dans la session et affiche la valeur de la clé. Si le champ « Video » est vide, cela entraîne un message d’erreur.--}}

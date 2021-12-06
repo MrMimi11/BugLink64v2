@@ -16,7 +16,7 @@ class AddForeignToGames extends Migration
         Schema::table('bugs', function (Blueprint $table)
         {
             $table->foreignId('game_id')->constrained();
-            $table->foreignId('user_id')->constrained();
+            $table->foreignId('user_id')->constrained()->nullable();
         });
     }
 

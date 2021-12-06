@@ -17,6 +17,14 @@
     a.backbug{
         margin-left: 15px;
     }
+    .allbutton{
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-around;
+    }
+    .buttonbug{
+        margin: 5px;
+    }
 }
 @media only screen and (max-width: 800px) {
     .contentbug {
@@ -31,5 +39,13 @@
 
     .descbug {
         margin-top: 18em;
+    }
+    .allbutton{
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: space-around;
+    }
+    .buttonbug{
+        margin: 5px;
     }
 }

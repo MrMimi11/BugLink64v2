@@ -19,7 +19,7 @@
         <span class="text-danger text-sm">{{ $message }}</span>
         @enderror
         <div class="form-group">
-            <label for="title">Object</label>
+            <label for="title">Object (in french or english)</label>
             <input type="text" name="object" class="form-control" id="title">
         </div>
         @error('object')

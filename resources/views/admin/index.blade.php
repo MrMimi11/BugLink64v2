@@ -22,7 +22,7 @@
                         <p class="card-text pt-2">{{ $bug->user->pseudo }}</p>
                         <p class="card-text pt-2">{{ Str::limit($bug->description, 100) }}</p>
                         <a href="{{ route('admin.bugs.show', $bug) }}" class="card-link">Read more</a>
-                        <a href="#" class="card-link">Publish</a>
+{{--                        <a href="#" class="card-link">Publish</a>--}}
                     </div>
                 </div>
             </div>

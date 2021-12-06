@@ -20,6 +20,7 @@ class   User extends Authenticatable
         'pseudo',
         'email',
         'password',
+        'is_banned'
     ];
 
     /**
@@ -39,6 +40,12 @@ class   User extends Authenticatable
      */
     protected $casts = [
         'email_verified_at' => 'datetime',
-        'is_admin' => 'boolean'
+        'is_admin' => 'boolean',
+        'is_banned' => 'boolean'
     ];
+
+    public function bugs()
+    {
+        return $this->hasMany(Bug::class);
+    }
 }

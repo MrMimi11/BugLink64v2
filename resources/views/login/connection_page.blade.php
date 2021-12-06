@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('content')
-    <h2 class="text-center">S'inscrire</h2>
+    <h2 class="text-center">Log in</h2>
     <form action="{{ route('connection') }}" method="post">
         @csrf
         <div class="form-group">
@@ -19,7 +19,11 @@
         @enderror
         @include('flash.flash')
         <div>
-            <button class="btn float-right" type="submit">Se connecter</button>
+            <button class="btn float-right" type="submit">Log in</button>
         </div>
     </form>
+    <div>
+        <p>You don't have an account? <a href="{{ route('registration.index') }}">Created in one</a></p>
+        <p>forgotten password? <a href="{{ route('forgot.show') }}">reset</a></p>
+    </div>
 @endsection

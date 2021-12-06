@@ -26,7 +26,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav w-100 d-flex align-items-center justify-content-between">
                 <li class="">
-                    <a class="nav-link active" aria-current="page" href="#">About</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('home.show') }}">About</a>
                 </li>
                 <li>
                     <a href="{{ route('home.index') }}" class="d-flex justify-content-center logonav">

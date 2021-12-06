@@ -21,8 +21,8 @@ class HomeController extends Controller
      * @param Home $home
      * @return Response
      */
-    public function show(Home $home)
+    public function show()
     {
-        return view('home.show', compact('home', 'game'));
+        return view('home.show');
     }
 }

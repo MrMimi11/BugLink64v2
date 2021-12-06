@@ -19,7 +19,7 @@
                 <label for="game">Game</label>
                 <select name="game" class="form-control" id="game">
                     @foreach($games as $game)
-                        <option value="{{ $game->id }}">{{ $game->name }}</option>
+                        <option {{ $bug->game->name === $game->name ? 'selected' : '' }} value="{{ $game->id }}">{{ $game->name }}</option>
                     @endforeach
                 </select>
             </div>

@@ -24,7 +24,7 @@ class BugController extends Controller
         $game->load('categories');
         //création variable bugs et assigner à bugs les catégories de jeu où il va prendre tous les noms de catégories en commençant par la 1ère
         // et ensuite récupérer les bugs
-        $bugs = $game->bugs()->with('categories', 'game')->active()->get();
+        $bugs = $game->bugs()->with('categories', 'game', 'user')->active()->get();
         //si la requête est égale à la catégorie
         if (request()->query('category')) {
             //assigner à cat, le jeu avec les catégories qu'il a, et on va voir la colonne slug pour faire une requête au niveau de la catégorie

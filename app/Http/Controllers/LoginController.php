@@ -26,7 +26,7 @@ class LoginController extends Controller
         }
         //authentifier l'utilisateur
         // auth()->user()->notify(new NewConnectionNotification);
-        return redirect()->route('connection.index')->with('error', 'bha nan');
+        return redirect()->route('connection.index')->with('error', 'Account information missmatch');
     }
 
 //Fonction deconnexion et retour vers la page de login.

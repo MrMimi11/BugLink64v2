@@ -4,34 +4,54 @@
 
     <!-- news -->
     <h3 class="text-center mt-5">News</h3>
-    <div class="d-flex justify-content-around mt-4 news">
-        <div class="card cardnews" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="">
-            <div class="card-body">
-                <h5 class="card-title">Coming soon</h5>
-                <p class="card-text"></p>
-                <a href="#" class="btn">See this</a>
+    @if($bugs)
+        @foreach($bugs as $bug)
+            <div class="d-flex justify-content-around mt-4 news">
+                <div class="card cardnews" style="width: 18rem;">
+                    <img class="card-img-top" src="..." alt="">
+                    <div class="card-body">
+                        @if($bug->video)
+                            <iframe width="150" height="150" src="{{str_replace('watch?v=', 'embed/', $bug->video) }}"
+                                    frameborder="0"
+                                    allow="autoplay; encrypted-media" allowfullscreen class="bugofvideo"></iframe>
+                        @endif
+                        <p class="card-text">{{ $bug->title }}</p>
+                        <p class="card-text">{{ Str::limit($bug->description, 250) }}</p>
+                        <a href="{{ route('games.bugs.show', [$bug->game->slug, $bug]) }}" class="btn">See this</a>
+                    </div>
+                </div>
             </div>
-        </div>
-        <div class="card cardnews" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="">
-            <div class="card-body">
-                <h5 class="card-title">Coming soon</h5>
-                <p class="card-text">
+        @endforeach
+    @endif
 
-                </p>
-                <a href="#" class="btn">See this</a>
-            </div>
-        </div>
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="">
-            <div class="card-body">
-                <h5 class="card-title">Coming soon</h5>
-                <p class="card-text"></p>
-                <a href="#" class="btn">See this</a>
-            </div>
-        </div>
-    </div>
+    {{--    <div class="d-flex justify-content-around mt-4 news">--}}
+    {{--        <div class="card cardnews" style="width: 18rem;">--}}
+    {{--            <img class="card-img-top" src="..." alt="">--}}
+    {{--            <div class="card-body">--}}
+    {{--                <h5 class="card-title">Coming soon</h5>--}}
+    {{--                <p class="card-text"></p>--}}
+    {{--                <a href="#" class="btn">See this</a>--}}
+    {{--            </div>--}}
+    {{--        </div>--}}
+    {{--        <div class="card cardnews" style="width: 18rem;">--}}
+    {{--            <img class="card-img-top" src="..." alt="">--}}
+    {{--            <div class="card-body">--}}
+    {{--                <h5 class="card-title">Coming soon</h5>--}}
+    {{--                <p class="card-text">--}}
+
+    {{--                </p>--}}
+    {{--                <a href="#" class="btn">See this</a>--}}
+    {{--            </div>--}}
+    {{--        </div>--}}
+    {{--        <div class="card" style="width: 18rem;">--}}
+    {{--            <img class="card-img-top" src="..." alt="">--}}
+    {{--            <div class="card-body">--}}
+    {{--                <h5 class="card-title">Coming soon</h5>--}}
+    {{--                <p class="card-text"></p>--}}
+    {{--                <a href="#" class="btn">See this</a>--}}
+    {{--            </div>--}}
+    {{--        </div>--}}
+    {{--    </div>--}}
 
     <!-- text center on home page-->
     <div class="centre">
@@ -39,7 +59,7 @@
         <p class="text-center">The info to get into the bugs is here!
             Bugs can be very useful to pass some stages of the game, some manipulations
             are enough to discover that one can walk above the void or even cross the walls...
-            You know a bug that doesn’t exist here? Create an account and share it!
+            <u>You know a bug that doesn’t exist here? Create an account and share it!</u>
             If you have any further questions you can join the discord room or ask for help from members of
             the community.
             Have a good time!
@@ -49,15 +69,19 @@
     <!-- choice ocarina of time and majora's mask -->
 
     <div class="titlegame d-flex justify-content-around mt-5">
-{{--        @foreach($games as $game)--}}
-{{--            <li>--}}
-{{--                <a href="{{ route('games.show', $game->slug) }}">{{ $game->name }}</a>--}}
-{{--                <a style="color: deepskyblue;" href="{{ route('games.edit', $game->slug) }}">Edit</a>--}}
-{{--                <a style="color: red;" href="{{ route('games.destroy', $game->slug) }}">Delete</a>--}}
-{{--            </li>--}}
-{{--        @endforeach--}}
-        <div class="linkgame"> <a href="{{ route('games.bugs.index', \App\Models\Game::where('slug', 'ocarina-of-time')->first()) }}">The Legend of Zelda: Ocarina Of Time</a></div>
-        <div class="linkgame"> <a href="{{ route('games.bugs.index', \App\Models\Game::where('slug', 'majora-s-mask')->first()) }}">The Legend of Zelda: Majora's Mask</a></div>
+        {{--        @foreach($games as $game)--}}
+        {{--            <li>--}}
+        {{--                <a href="{{ route('games.show', $game->slug) }}">{{ $game->name }}</a>--}}
+        {{--                <a style="color: deepskyblue;" href="{{ route('games.edit', $game->slug) }}">Edit</a>--}}
+        {{--                <a style="color: red;" href="{{ route('games.destroy', $game->slug) }}">Delete</a>--}}
+        {{--            </li>--}}
+        {{--        @endforeach--}}
+        <div class="linkgame"><a
+                href="{{ route('games.bugs.index', \App\Models\Game::where('slug', 'ocarina-of-time')->first()) }}">The
+                Legend of Zelda: Ocarina Of Time</a></div>
+        <div class="linkgame"><a
+                href="{{ route('games.bugs.index', \App\Models\Game::where('slug', 'majora-s-mask')->first()) }}">The
+                Legend of Zelda: Majora's Mask</a></div>
     </div>
 
     <div class="imagegame d-flex justify-content-around mt-2">
@@ -74,9 +98,8 @@
             <p>Need help? You can contact me <a href="{{ route('contact.create') }}">here</a></p>
         </div>
 
-        <div class="row d-flex flex-nowrap justify-content-center network">
-            Network:
-                <a href="https://discord.gg/VxtKfdAaE9"><img src="{{ asset('images/Discord-Logo+Wordmark-Color.svg') }}" alt="Discord" class="w-50 h-50"></a>
+        <div class="row d-flex flex-nowrap justify-content-center ">
+            Network:&nbsp<a href="https://discord.gg/37657vVzZD">Discord</a>
         </div>
     </div>
 
