@@ -1,6 +1,6 @@
 @extends('layouts.default')
 @section('content')
-    <h1 class="text-center">BugLink64</h1>
+    <h1 class="text-center mt-2">BugLink64</h1>
 
     <!-- news -->
     <h3 class="text-center mt-5">News</h3>
@@ -12,7 +12,7 @@
                         <img class="card-img-top" src="..." alt="">
                         <div class="card-body d-flex flex-column justify-content-center align-items-center">
                             @if($bug->video)
-                                <iframe width="150" height="150" src="{{str_replace('watch?v=', 'embed/', $bug->video) }}"
+                                <iframe width="250" height="250" src="{{str_replace('watch?v=', 'embed/', $bug->video) }}"
                                         frameborder="0"
                                         allow="autoplay; encrypted-media" allowfullscreen class="bugofvideo"></iframe>
                             @endif

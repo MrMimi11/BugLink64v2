@@ -40,7 +40,7 @@
     </div>
 
     {{--    List of bug--}}
-    @foreach($bugs as $bug)
+    @forelse($bugs as $bug)
         <div class="border border-dark w-100 mb-3">
             <div class="bugcontentborder d-flex p-3">
                 @if($bug->video)
@@ -59,6 +59,7 @@
                     </div>
                 </div>
                 <div class="col-2 d-flex allbutton">
+                    @if(auth()->check() && auth()->user()->is_admin)
                     <a href="{{ route('games.bugs.edit', [$game->slug, $bug->slug]) }}" class="text-white">
                         <button type="button" class="btn mb-3 w-100">Edit</button>
                     </a>
@@ -66,11 +67,14 @@
                     <a href="{{ route('games.bugs.delete', [$game->slug, $bug->slug]) }}" class="text-white">
                         <button type="button" class="btn mb-3 w-100">Delete</button>
                     </a>
+                    @endif
                     <a href="{{ route('games.bugs.show', [$game->slug, $bug->slug]) }}" class="text-white">
                         <button type="button" class="btn w-100">See this bug</button>
                     </a>
                 </div>
             </div>
         </div>
-    @endforeach
+        @empty
+        No bug
+    @endforelse
 @endsection

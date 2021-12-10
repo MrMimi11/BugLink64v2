@@ -4,6 +4,7 @@
     {{--    Action quand on va cliquer et en method post pour cacher dans l'url--}}
     <form action="{{ route('registration.store') }}" method="post">
         @csrf
+        @dump(session('errors'))
         <div class="form-group">
             <label for="pseudo">Pseudo</label>
             <input type="text" class="form-control" id="pseudo" placeholder="Pseudo" name="pseudo">

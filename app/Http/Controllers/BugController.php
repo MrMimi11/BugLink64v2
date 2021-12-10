@@ -6,6 +6,7 @@ use App\Http\Requests\BugRequest;
 use App\Models\Bug;
 use App\Models\Category;
 use App\Models\Game;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Illuminate\Support\Str;
@@ -85,10 +86,10 @@ class BugController extends Controller
             'user_id' => auth()->user()->id, // TODO: Changer pour l'utilisateur connecté
             //la colonne 'description' va faire une requête sur l'input où le nom est 'description' dans le formulaire création bug
             //(name = 'description' dans le input)
-            'description'=> $request->input('description'),
+            'description' => $request->input('description'),
             //la colonne 'video' va faire une requête sur l'input où le nom est 'video' dans le formulaire création bug
             //(name = 'video' dans le input)
-            'video'=> $request->input('video'),
+            'video' => $request->input('video'),
 
             'validated_at' => null
         ]);
@@ -141,8 +142,8 @@ class BugController extends Controller
             'title' => $title,
             'slug' => Str::slug($title),
             'game_id' => $game->id,
-            'description'=> $request->input('description'),
-            'video'=> $goodurl
+            'description' => $request->input('description'),
+            'video' => $goodurl
         ]);
         return redirect()->route('games.bugs.index', [$game->slug, $bug->slug]);
     }
@@ -168,17 +169,16 @@ class BugController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param Bug $bug
      * @param Game $game
      * @return Response
+     * @throws \Exception
      */
-    public function search(Bug $bug, Game $game)
+    public function search(Game $game)
     {
-        $q = request()->input('q');
-        $bugs = Bug::where('title', 'like', "%$q%")
-            ->orWhere('description', 'like', "%$q%")
-            ->paginate(0);
-        //dd($bugs);
+        $q = Str::lower(request()->input('q'));
+        $game->load('bugs');
+        $bugs = $game->bugs()->search($q)->paginate(5);
+
         return view('pages.games.bugs.resultsearch', compact('game'))->with('bugs', $bugs);
     }
 }

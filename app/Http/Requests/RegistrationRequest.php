@@ -24,9 +24,10 @@ class RegistrationRequest extends FormRequest
     public function rules()
     {
         return [
-            'pseudo' => 'required|string|unique:user,pseudo',
+            'pseudo' => 'required|string|unique:users,pseudo',
             'email' => 'required|string',
-            'password' => 'required|string|min:8|confirmed', //minimum 8 caractères et confirmation mot de passe
+            'password' => 'required|string|min:8', //minimum 8 caractères et confirmation mot de passe
+            'password_confirmation' => 'required|string|min:8|same:password', //minimum 8 caractères et confirmation mot de passe
         ];
     }
 }

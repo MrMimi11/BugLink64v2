@@ -19,15 +19,6 @@ use App\Http\Controllers\ContactController;
 
 Route::get('', [HomeController::class, 'index'])->name('home.index');
 Route::get('/about', [HomeController::class, 'show'])->name('home.show');
-if (app()->environment() !== 'production') {
-    dd('no');
-    Route::get('migrate', function () {
-        \Illuminate\Support\Facades\Artisan::call('migrate:fresh', [
-            '--seed' => true
-        ]);
-    });
-
-}
 
 Route::get('contact', [ContactController::class, 'create'])->name('contact.create');
 Route::post('contact', [ContactController::class, 'store'])->name('contact.store');

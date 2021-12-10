@@ -73,4 +73,9 @@ class Bug extends Model
     {
         return $query->whereNotNull('validated_at');
     }
+
+    public function scopeSearch(Builder $query, string $search)
+    {
+        return $query->where('title', 'like', "%$search%")->orWhere('description', 'like', "%$search%");
+    }
 }
