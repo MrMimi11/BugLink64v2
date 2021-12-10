@@ -24,7 +24,7 @@ class ProfileRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'pseudo' => 'required|string',
+            'pseudo' => 'required|string|unique:user,pseudo',
             'email' => ['required', 'string', 'email', 'max:255',
                 Rule::unique('users')->ignore(auth()->user()),
             ],

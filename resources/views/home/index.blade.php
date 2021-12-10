@@ -5,53 +5,26 @@
     <!-- news -->
     <h3 class="text-center mt-5">News</h3>
     @if($bugs)
-        @foreach($bugs as $bug)
-            <div class="d-flex justify-content-around mt-4 news">
-                <div class="card cardnews" style="width: 18rem;">
-                    <img class="card-img-top" src="..." alt="">
-                    <div class="card-body">
-                        @if($bug->video)
-                            <iframe width="150" height="150" src="{{str_replace('watch?v=', 'embed/', $bug->video) }}"
-                                    frameborder="0"
-                                    allow="autoplay; encrypted-media" allowfullscreen class="bugofvideo"></iframe>
-                        @endif
-                        <p class="card-text">{{ $bug->title }}</p>
-                        <p class="card-text">{{ Str::limit($bug->description, 250) }}</p>
-                        <a href="{{ route('games.bugs.show', [$bug->game->slug, $bug]) }}" class="btn">See this</a>
+        <div class="d-flex justify-content-around cardnews">
+            @foreach($bugs as $bug)
+                <div class="d-flex justify-content-around mt-4 news">
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="..." alt="">
+                        <div class="card-body d-flex flex-column justify-content-center align-items-center">
+                            @if($bug->video)
+                                <iframe width="150" height="150" src="{{str_replace('watch?v=', 'embed/', $bug->video) }}"
+                                        frameborder="0"
+                                        allow="autoplay; encrypted-media" allowfullscreen class="bugofvideo"></iframe>
+                            @endif
+                            <p class="card-text">{{ $bug->title }}</p>
+                            <p class="card-text">{{ Str::limit($bug->description, 250) }}</p>
+                            <a href="{{ route('games.bugs.show', [$bug->game->slug, $bug]) }}" class="btn">See this</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-        @endforeach
+            @endforeach
+        </div>
     @endif
-
-    {{--    <div class="d-flex justify-content-around mt-4 news">--}}
-    {{--        <div class="card cardnews" style="width: 18rem;">--}}
-    {{--            <img class="card-img-top" src="..." alt="">--}}
-    {{--            <div class="card-body">--}}
-    {{--                <h5 class="card-title">Coming soon</h5>--}}
-    {{--                <p class="card-text"></p>--}}
-    {{--                <a href="#" class="btn">See this</a>--}}
-    {{--            </div>--}}
-    {{--        </div>--}}
-    {{--        <div class="card cardnews" style="width: 18rem;">--}}
-    {{--            <img class="card-img-top" src="..." alt="">--}}
-    {{--            <div class="card-body">--}}
-    {{--                <h5 class="card-title">Coming soon</h5>--}}
-    {{--                <p class="card-text">--}}
-
-    {{--                </p>--}}
-    {{--                <a href="#" class="btn">See this</a>--}}
-    {{--            </div>--}}
-    {{--        </div>--}}
-    {{--        <div class="card" style="width: 18rem;">--}}
-    {{--            <img class="card-img-top" src="..." alt="">--}}
-    {{--            <div class="card-body">--}}
-    {{--                <h5 class="card-title">Coming soon</h5>--}}
-    {{--                <p class="card-text"></p>--}}
-    {{--                <a href="#" class="btn">See this</a>--}}
-    {{--            </div>--}}
-    {{--        </div>--}}
-    {{--    </div>--}}
 
     <!-- text center on home page-->
     <div class="centre">

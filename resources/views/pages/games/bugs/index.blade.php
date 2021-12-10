@@ -9,11 +9,11 @@
     {{--    Post a bug and search bar--}}
     <div class="row d-flex justify-content-between align-items-center mb-4">
         @auth()
-        <div>
+        <div class="buttonpostabug">
             <a href="{{ route('games.bugs.create', $game->slug) }}" class="button btn">Post a bug</a>
         </div>
         @endauth
-        <div>
+        <div class="searchbar">
             @include('pages.games.bugs.search')
         </div>
     </div>
@@ -49,28 +49,33 @@
                 @endif
                 <div class="ml-3 w-100">
                     <h4>
-                        {{ $bug->title }} | {{ $bug->game->name }} | {{ $bug->user->pseudo }}
+                        {{ $bug->title }} | {{ $bug->game->name }} |
                         @foreach($bug->categories as $cat)
                             {{ $cat->name }}
                         @endforeach
                     </h4>
+                    <h5>
+                        Posted by {{ $bug->user->pseudo }}
+                    </h5>
                     <div>
                         {{  Str::limit($bug->description, 200) }}
                     </div>
                 </div>
                 <div class="col-2 d-flex allbutton">
                     @if(auth()->check() && auth()->user()->is_admin)
-                        <a href="{{ route('games.bugs.edit', [$game->slug, $bug->slug]) }}" class="text-white">
-                            <button type="button" class="btn mb-3 w-100">Edit</button>
-                        </a>
-                        {{--                    route défini dans web.php pour supprimer le bug et ça doit prendre en compte l'url du jeu est l'url du bug--}}
-                        <a href="{{ route('games.bugs.delete', [$game->slug, $bug->slug]) }}" class="text-white buttonbug">
-                            <button type="button" class="btn mb-3 w-100">Delete</button>
-                        </a>
+                        <div class="buttonplacement">
+                            <a href="{{ route('games.bugs.edit', [$game->slug, $bug->slug]) }}" class="text-white">
+                                <button type="button" class="btn mb-3 w-100">Edit</button>
+                            </a>
+                            {{--                    route défini dans web.php pour supprimer le bug et ça doit prendre en compte l'url du jeu est l'url du bug--}}
+                            <a href="{{ route('games.bugs.delete', [$game->slug, $bug->slug]) }}" class="text-white buttonbug">
+                                <button type="button" class="btn mb-3 w-100">Delete</button>
+                            </a>
+                        </div>
                     @endif
-                    <a href="{{ route('games.bugs.show', [$game->slug, $bug->slug]) }}" class="text-white">
-                        <button type="button" class="btn w-100">See this bug</button>
-                    </a>
+                        <a href="{{ route('games.bugs.show', [$game->slug, $bug->slug]) }}" class="text-white">
+                            <button type="button" class="btn w-100">See this bug</button>
+                        </a>
                 </div>
             </div>
         </div>

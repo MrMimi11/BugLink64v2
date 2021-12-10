@@ -52,7 +52,7 @@ class BugController extends Controller
      * @param Bug $bug
      * @return Response
      */
-    public function show(Bug $bug)
+    public function show(Game $game, Bug $bug)
     {
         $bug->load('categories', 'game', 'user');
         $categories = Category::all();
@@ -81,17 +81,19 @@ class BugController extends Controller
             'user_id' => User::first()->id,
         ]);
         $bug->categories()->sync($request->input('categories'));
-        return redirect()->route('admin.bugs.show', $bug)->with('success', 'bug mis a jour');
+        return redirect()->route('admin.bugs.show', $bug)->with('success', 'bug updated');
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
-     * @return Response
+     * @param Bug $bug
+     * @return void
      */
-    public function destroy($id)
+    public function destroy(Bug $bug)
     {
-        //
+        $bug->categories()->detach();
+        $bug->delete();
+        return redirect()->route('admin.bugs.index')->with('success', 'bug has been delete');
     }
 }

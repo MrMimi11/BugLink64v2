@@ -11,7 +11,9 @@ class HomeController extends Controller
 {
     public function index(Game $game)
     {
-        $bugs = Bug::with('categories', 'game')->latest('created_at')->active()->limit(3)->get();
+        $bugs = cache()->remember('home.bugs', now()->addRealMinutes(60), function () {
+            return Bug::with('categories', 'game')->latest('created_at')->active()->limit(3)->get();
+        });
         return view('home.index', compact('game', 'bugs'));
     }
 

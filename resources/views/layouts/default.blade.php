@@ -35,7 +35,10 @@
                     </a>
                 </li>
                 @auth
-                    <a class="nav-link active" aria-current="page" href="{{ route('logout.index') }}">Logout</a>
+                    <li class="d-flex">
+                        <a class="nav-link active" aria-current="page" href="{{ route('profile.index') }}">Profile</a>
+                        <a class="nav-link active" aria-current="page" href="{{ route('logout.index') }}">Logout</a>
+                    </li>
                 @endauth
                 @guest
                     <li class="d-flex">

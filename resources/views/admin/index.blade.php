@@ -6,7 +6,7 @@
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">{{ Str::limit($bug->title, 150) }}</h5>
-                        <h6 class="card-subtitle mb-2 text-muted d-flex align-items-center">
+                        <h6 class="card-subtitle mb-2 text-muted categorybloc">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                  stroke-linejoin="round" class="feather feather-folder feather-sm" style="margin-right: 5px">
@@ -22,6 +22,7 @@
                         <p class="card-text pt-2">{{ $bug->user->pseudo }}</p>
                         <p class="card-text pt-2">{{ Str::limit($bug->description, 100) }}</p>
                         <a href="{{ route('admin.bugs.show', $bug) }}" class="card-link">Read more</a>
+                        <a href="{{ route('admin.bugs.destroy', [$bug]) }} " class="card-link">Delete</a>
 {{--                        <a href="#" class="card-link">Publish</a>--}}
                     </div>
                 </div>

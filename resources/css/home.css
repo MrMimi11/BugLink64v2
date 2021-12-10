@@ -37,6 +37,8 @@ div.network {
         flex-direction: column;
     }
     .cardnews{
+        display: flex;
+        flex-direction: column;
         margin-bottom: 1em;
     }
 }
@@ -52,6 +54,8 @@ div.network {
         align-items: center;
     }
     .cardnews{
+        display: flex;
+        flex-direction: column;
         margin-bottom: 1em;
     }
     .footer{
@@ -69,6 +73,8 @@ div.network {
         flex-direction: column;
     }
     .cardnews{
+        display: flex;
+        flex-direction: column;
         margin-bottom: 1em;
     }
     .titlegame{

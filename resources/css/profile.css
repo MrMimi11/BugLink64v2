@@ -1,0 +1,13 @@
+.changepassword{
+    width: 50%;
+}
+@media only screen and (max-width: 640px) {
+    .changepassword{
+        width: 100%;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .changepassword{
+        width: 100%;
+    }
+}
