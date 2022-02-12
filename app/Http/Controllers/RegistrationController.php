@@ -31,7 +31,6 @@ class RegistrationController extends Controller
      */
     public function store(RegistrationRequest $registrationRequest)
     {
-        // remmimi11@gmail.com
         //création variable inputs où on va lui dire que ce qu'il y a dans le RegistrationRequest doit être valide donc valider la requête
         $inputs = $registrationRequest->validated();
         //on va créer un User à partir du model
