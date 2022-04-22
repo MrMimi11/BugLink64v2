@@ -23,7 +23,7 @@
                     <tr>
                         <td>{{ $user->pseudo }}</td>
                         <td>
-                            {{ $user->pseudo }}
+                            {{ $user->email }}
                         </td>
                         <td>
                             @if($user->is_admin)
