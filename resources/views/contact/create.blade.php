@@ -1,4 +1,7 @@
 @extends('layouts.default')
+@section('scripts')
+    {!! htmlScriptTagJsApi() !!}
+@endsection
 @section('content')
 @include('flash.flash')
     <h2 class="text-center">Contact me</h2>
@@ -26,10 +29,15 @@
         <span class="text-danger text-sm">{{ $message }}</span>
         @enderror
         <div class="form-group">
-            <label for="description">Description</label>
+            <label for="description">Description (in french or english)</label>
             <textarea name="content" class="form-control" id="description" rows="7"></textarea>
         </div>
         @error('content')
+        <span class="text-danger text-sm">{{ $message }}</span>
+        @enderror
+        <br>
+        {!! htmlFormSnippet() !!}
+        @error('g-recaptcha-response')
         <span class="text-danger text-sm">{{ $message }}</span>
         @enderror
         <br>

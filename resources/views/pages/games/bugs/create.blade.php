@@ -24,7 +24,7 @@
         <span class="text-danger text-sm">{{ $message }}</span>
         @enderror
         <div class="form-group">
-            <label for="video">Video (only links from youtube)</label>
+            <label for="video">Video (only links from youtube) and In English or French (if there is a good description)</label>
             <input type="text" name="video" class="form-control" id="video">
         </div>
 {{--     Le @error cherche s’il y a une clé error dans la session et affiche la valeur de la clé. Si le champ « Video » est vide, cela entraîne un message d’erreur.--}}

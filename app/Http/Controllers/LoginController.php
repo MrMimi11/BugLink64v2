@@ -30,8 +30,7 @@ class LoginController extends Controller
     }
 
 //Fonction deconnexion et retour vers la page de login.
-    public
-    function logout(Request $request)
+    public function logout(Request $request)
     {
         auth()->logout();
         $request->session()->invalidate();
