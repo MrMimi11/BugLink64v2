@@ -19,7 +19,7 @@
     </div>
 
     {{--    All categories--}}
-    <div>
+    <div class="categorylist">
         <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
             @foreach($game->categories as $category)
                 @if($category->slug === 'all')
@@ -30,7 +30,7 @@
                     </li>
                     @else
                     <li class="nav-item">
-                        <a class="nav-link {{ request()->query('category') === $category->slug ? 'active' : '' }} "
+                        <a class="nav-link {{ request()->query('category') === $category->slug ? 'active' : 'underline' }} "
                            href="{{ route('games.bugs.index', [$game->slug, 'category=' . $category->slug]) }}"
                            aria-selected="true">{{ $category->name }}</a>
                     </li>
@@ -41,7 +41,7 @@
 
     {{--    List of bug--}}
     @foreach($bugs as $bug)
-        <div class="border border-dark w-100 mb-3">
+        <div class="w-100 mb-3">
             <div class="bugcontentborder d-flex p-3">
                 @if($bug->video)
                     <iframe width="150" height="150" src="{{str_replace('watch?v=', 'embed/', $bug->video) }}" frameborder="0"
