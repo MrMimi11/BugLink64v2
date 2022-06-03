@@ -59,4 +59,4 @@
     @yield('content')
 </div>
 </body>
-</html
+</html>
